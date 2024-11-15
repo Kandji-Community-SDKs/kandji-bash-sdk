@@ -30,14 +30,14 @@ Name | Type | Description  | Notes
  **deviceId** | **string** |  | [optional] [default to null]
  **status** | **string** | Return all records matching a specified status. The following status options are available: <code>quarantined</code>, <code>not_quarantined</code>, or <code>released</code>. Leave this parameter empty to return all status types. | [optional] [default to null]
  **sortBy** | **string** | <p>Results can be sorted with the following options: </p>
- <ul>
+<ul>
 <li>threat_name</li>
 <li>classification</li>
 <li>device_name</li>
- <li>process_name</li>
+<li>process_name</li>
 <li>process_owner</li>
 <li>detection_date</li>
- <li>status</li>
+<li>status</li>
 </ul>
 <p>Prepending a dash (-) to the parameter value will reverse the order of the returned results.</p>
 <p><code>?sort_by=-device_name</code> will order the response by device_name in descending order.</p> | [optional] [default to null]

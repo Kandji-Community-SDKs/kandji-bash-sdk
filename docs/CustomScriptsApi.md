@@ -53,7 +53,7 @@ Delete Custom Script
 
 <p>NOTICE: This is permanent so be careful.</p>
 <p>This endpoint sends a request to delete a specific custom scripts from the Kandji library.</p>
- <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
+<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example

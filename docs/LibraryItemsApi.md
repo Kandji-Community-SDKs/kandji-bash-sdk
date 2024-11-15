@@ -58,7 +58,7 @@ Get Library Item Statuses
 
 <p>This endpoint retrieves the statuses related to a specific library item.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
- <p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 

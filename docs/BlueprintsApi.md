@@ -27,19 +27,19 @@ Assign Library Item
 <h3 id=&quot;request-body&quot;>Request Body</h3>
 <ul>
 <li><p><code>library_item_id</code> (string, required)</p>
- </li>
+</li>
 <li><p><code>assignment_node_id</code> (string, required for maps)</p>
- <ul>
+<ul>
 <li>Note: To find the assignment_node_id, view the map in a browser. Then, on your keyboard, press and hold the Option ⌥ key. Each node ID remains fixed for the lifespan of the node on the map.</li>
 </ul>
 </li>
 </ul>
- <h3 id=&quot;error-responses&quot;>Error responses</h3>
+<h3 id=&quot;error-responses&quot;>Error responses</h3>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
 <thead>
 <tr>
 <th><strong>Code</strong></th>
- <th><strong>Body</strong></th>
+<th><strong>Body</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -57,8 +57,8 @@ Assign Library Item
 </tr>
 <tr>
 <td></td>
- <td>&quot;assignment_node_id cannot be provided for Classic Blueprint&quot;</td>
- </tr>
+<td>&quot;assignment_node_id cannot be provided for Classic Blueprint&quot;</td>
+</tr>
 <tr>
 <td></td>
 <td>&quot;Must provide assignment_node_id for Assignment Map Blueprint&quot;</td>
@@ -103,7 +103,7 @@ Create Blueprint
 
 <p>This request creates a new empty Blueprint or a new Blueprint from a template. The keys <code>name</code> and <code>enrollment_code</code> <code>is_active</code> are required, and the blueprint name key must be unique from the existing blueprint names in the Kandji tenant.</p>
 <p>optionally, <code>type: map</code> can be used when creating a new Assignment Map blueprint.</p>
- <p>Note: If cloning an existing blueprint,'type' value and the type of sourced ('source.id') blueprint must match and 'source.type' value must be set to 'blueprint'.</p>
+<p>Note: If cloning an existing blueprint,'type' value and the type of sourced ('source.id') blueprint must match and 'source.type' value must be set to 'blueprint'.</p>
 
 ### Example
 
@@ -116,11 +116,11 @@ Create Blueprint
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **enrollmentCodePeriodcode** | **string** | Optionally, set the enrollment code of the Blueprint. This key is not required. If an enrollment code is not supplied in the payload body, it will be randomly generated. The enrollment code will be returned in the response and visible in the Web app. | [default to null]
- **enrollmentCodePeriodisActive** | **string** | (required) Enable or Disable the Blueprint for manual device enrollment from the enrollment portal | [default to null]
  **name** | **string** | (required) Set the name of the Blueprint. The name provided must be unique. | [default to null]
- **sourcePeriodid** | **string** | Set either the source template ID, or the source Blueprint ID to clone an existing template or blueprint. | [default to null]
+ **enrollmentCodePeriodisActive** | **string** | (required) Enable or Disable the Blueprint for manual device enrollment from the enrollment portal | [default to null]
+ **enrollmentCodePeriodcode** | **string** | Optionally, set the enrollment code of the Blueprint. This key is not required. If an enrollment code is not supplied in the payload body, it will be randomly generated. The enrollment code will be returned in the response and visible in the Web app. | [default to null]
  **sourcePeriodtype** | **string** | Set the source to create the blueprint from. Possible options: <code>template</code> and <code>blueprint</code>. | [default to null]
+ **sourcePeriodid** | **string** | Set either the source template ID, or the source Blueprint ID to clone an existing template or blueprint. | [default to null]
  **type** | **string** | Choose the type of blueprint to create. Options: <code>classic</code> or <code>map</code> | [default to null]
 
 ### Return type
@@ -261,7 +261,7 @@ Get Manual Enrollment Profile
 </li>
 <li><p><code>Content-Disposition</code> = <code>attachment;filename=kandji-enroll.mobileconfig</code></p>
 </li>
- </ul>
+</ul>
 <p>An optional query parameter <code>sso=true</code> can be used to return a URL for SSO authentication instead. If this query parameter is used for a Blueprint that does not require authentication, then the enrollment profile will be returned.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
@@ -347,9 +347,9 @@ List Library Items
 <li><p><code>count</code> (int): The total count of library items.</p>
 </li>
 <li><p><code>next</code> (str): The URL for the next page of results, if available. If not available will value will be <code>null</code>.</p>
- </li>
+</li>
 <li><p><code>previous</code> (str): The URL for the previous page of results, if available. If not available will value will be <code>null</code>.</p>
- </li>
+</li>
 <li><p><code>results</code> (object): An array containing objects with the following fields:</p>
 <ul>
 <li><p><code>id</code> (str): The ID of the library item.</p>
@@ -399,23 +399,23 @@ Remove Library Item
 <h3 id=&quot;request-body&quot;>Request Body</h3>
 <ul>
 <li><p><code>library_item_id</code> (string, required)</p>
- </li>
+</li>
 <li><p><code>assignment_node_id</code> (string, required for maps)</p>
- </li>
+</li>
 </ul>
 <h3 id=&quot;error-responses&quot;>Error responses</h3>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
 <thead>
- <tr>
+<tr>
 <th><strong>Code</strong></th>
 <th><strong>Body</strong></th>
 </tr>
- </thead>
+</thead>
 <tbody>
 <tr>
 <td>400 - Bad Request</td>
 <td>Bad Request</td>
- </tr>
+</tr>
 <tr>
 <td></td>
 <td>&quot;assignment_node_id cannot be provided for Classic Blueprint&quot;</td>
@@ -425,9 +425,9 @@ Remove Library Item
 <td>&quot;Must provide assignment_node_id for Assignment Map Blueprint&quot;</td>
 </tr>
 <tr>
- <td></td>
+<td></td>
 <td>&quot;Library Item does not exist on Blueprint&quot;</td>
- </tr>
+</tr>
 <tr>
 <td></td>
 <td>&quot;Library Item does not exist in Assignment Node&quot;</td>
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 Update Blueprint
 
 <p>This requests allows updating of the name, icon, icon color, description, enrollment code, and active status on an existing blueprint.</p>
- <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
+<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>
 
 ### Example
@@ -486,10 +486,10 @@ Update Blueprint
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **blueprintId** | **string** |  | [default to null]
+ **name** | **string** | Update the name of the Blueprint | [default to null]
  **description** | **string** | Update the description of the Blueprint | [default to null]
  **enrollmentCodePeriodcode** | **string** | Update the enrollment code of the Blueprint | [default to null]
  **enrollmentCodePeriodisActive** | **string** | Disable the Blueprint for manual device enrollment from the enrollment portal. | [default to null]
- **name** | **string** | Update the name of the Blueprint | [default to null]
 
 ### Return type
 

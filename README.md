@@ -168,6 +168,13 @@ Class | Method | HTTP request | Description
 *DeviceSecretsApi* | [**getFilevaultRecoveryKey**](docs/DeviceSecretsApi.md#getfilevaultrecoverykey) | **GET** /api/v1/devices/{device_id}/secrets/filevaultkey | Get FileVault Recovery Key
 *DeviceSecretsApi* | [**getRecoveryLockPassword**](docs/DeviceSecretsApi.md#getrecoverylockpassword) | **GET** /api/v1/devices/{device_id}/secrets/recoverypassword | Get Recovery Lock Password
 *DeviceSecretsApi* | [**getUnlockPin**](docs/DeviceSecretsApi.md#getunlockpin) | **GET** /api/v1/devices/{device_id}/secrets/unlockpin | Get Unlock Pin
+*InHouseAppsApi* | [**createInhouseApp**](docs/InHouseAppsApi.md#createinhouseapp) | **POST** /api/v1/library/ipa-apps | Create In-House App
+*InHouseAppsApi* | [**deleteInhouseApp**](docs/InHouseAppsApi.md#deleteinhouseapp) | **DELETE** /api/v1/library/ipa-apps/{library_item_id} | Delete In-House App
+*InHouseAppsApi* | [**getInhouseApp**](docs/InHouseAppsApi.md#getinhouseapp) | **GET** /api/v1/library/ipa-apps/{library_item_id} | Get In-House App
+*InHouseAppsApi* | [**listInhouseApps**](docs/InHouseAppsApi.md#listinhouseapps) | **GET** /api/v1/library/ipa-apps | List In-House Apps
+*InHouseAppsApi* | [**updateInhouseApp**](docs/InHouseAppsApi.md#updateinhouseapp) | **PATCH** /api/v1/library/ipa-apps/{library_item_id} | Update In-House App
+*InHouseAppsApi* | [**uploadInhouseApp**](docs/InHouseAppsApi.md#uploadinhouseapp) | **POST** /api/v1/library/ipa-apps/upload | Upload In-House App
+*InHouseAppsApi* | [**uploadInhouseAppStatus**](docs/InHouseAppsApi.md#uploadinhouseappstatus) | **GET** /api/v1/library/ipa-apps/upload/{pending_upload_id}/status | Upload In-House App Status
 *LibraryItemsApi* | [**getLibraryItemActivity**](docs/LibraryItemsApi.md#getlibraryitemactivity) | **GET** /api/v1/library/library-items/{library_item_id}/activity | Get Library Item Activity
 *LibraryItemsApi* | [**getLibraryItemStatuses**](docs/LibraryItemsApi.md#getlibraryitemstatuses) | **GET** /api/v1/library/library-items/{library_item_id}/status | Get Library Item Statuses
 *LostModeApi* | [**disableLostMode**](docs/LostModeApi.md#disablelostmode) | **POST** /api/v1/devices/{device_id}/action/disablelostmode | Disable Lost Mode

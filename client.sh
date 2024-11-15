@@ -19,7 +19,7 @@
 # 
 #
 # CONTACT:
-# mitchelsblake@gmail.com
+# 
 #
 # MORE INFORMATION:
 # https://api-docs.kandji.io
@@ -97,9 +97,9 @@ declare -a result_color_table=( "$WHITE" "$WHITE" "$GREEN" "$YELLOW" "$WHITE" "$
 # 1 - required
 declare -A operation_parameters_minimum_occurrences
 operation_parameters_minimum_occurrences["createAdeIntegration:::blueprint_id"]=1
+operation_parameters_minimum_occurrences["createAdeIntegration:::phone"]=1
 operation_parameters_minimum_occurrences["createAdeIntegration:::email"]=1
 operation_parameters_minimum_occurrences["createAdeIntegration:::file"]=1
-operation_parameters_minimum_occurrences["createAdeIntegration:::phone"]=1
 operation_parameters_minimum_occurrences["deleteAdeIntegration:::ade_token_id"]=1
 operation_parameters_minimum_occurrences["getAdeDevice:::device_id"]=1
 operation_parameters_minimum_occurrences["getAdeIntegration:::ade_token_id"]=1
@@ -116,20 +116,20 @@ operation_parameters_minimum_occurrences["listDevicesAssociatedToAdeToken:::ade_
 operation_parameters_minimum_occurrences["listDevicesAssociatedToAdeToken:::page"]=0
 operation_parameters_minimum_occurrences["renewAdeIntegration:::ade_token_id"]=1
 operation_parameters_minimum_occurrences["renewAdeIntegration:::blueprint_id"]=1
+operation_parameters_minimum_occurrences["renewAdeIntegration:::phone"]=1
 operation_parameters_minimum_occurrences["renewAdeIntegration:::email"]=1
 operation_parameters_minimum_occurrences["renewAdeIntegration:::file"]=1
-operation_parameters_minimum_occurrences["renewAdeIntegration:::phone"]=1
 operation_parameters_minimum_occurrences["updateAdeDevice:::device_id"]=1
 operation_parameters_minimum_occurrences["updateAdeDevice:::body"]=0
 operation_parameters_minimum_occurrences["updateAdeIntegration:::ade_token_id"]=1
 operation_parameters_minimum_occurrences["updateAdeIntegration:::body"]=0
 operation_parameters_minimum_occurrences["assignLibraryItem:::blueprint_id"]=1
 operation_parameters_minimum_occurrences["assignLibraryItem:::body"]=0
-operation_parameters_minimum_occurrences["createBlueprint:::enrollment_code.code"]=1
-operation_parameters_minimum_occurrences["createBlueprint:::enrollment_code.is_active"]=1
 operation_parameters_minimum_occurrences["createBlueprint:::name"]=1
-operation_parameters_minimum_occurrences["createBlueprint:::source.id"]=1
+operation_parameters_minimum_occurrences["createBlueprint:::enrollment_code.is_active"]=1
+operation_parameters_minimum_occurrences["createBlueprint:::enrollment_code.code"]=1
 operation_parameters_minimum_occurrences["createBlueprint:::source.type"]=1
+operation_parameters_minimum_occurrences["createBlueprint:::source.id"]=1
 operation_parameters_minimum_occurrences["createBlueprint:::type"]=1
 operation_parameters_minimum_occurrences["deleteBlueprint:::blueprint_id"]=1
 operation_parameters_minimum_occurrences["getBlueprint:::blueprint_id"]=1
@@ -146,27 +146,27 @@ operation_parameters_minimum_occurrences["listLibraryItems:::blueprint_id"]=1
 operation_parameters_minimum_occurrences["removeLibraryItem:::blueprint_id"]=1
 operation_parameters_minimum_occurrences["removeLibraryItem:::body"]=0
 operation_parameters_minimum_occurrences["updateBlueprint:::blueprint_id"]=1
+operation_parameters_minimum_occurrences["updateBlueprint:::name"]=1
 operation_parameters_minimum_occurrences["updateBlueprint:::description"]=1
 operation_parameters_minimum_occurrences["updateBlueprint:::enrollment_code.code"]=1
 operation_parameters_minimum_occurrences["updateBlueprint:::enrollment_code.is_active"]=1
-operation_parameters_minimum_occurrences["updateBlueprint:::name"]=1
-operation_parameters_minimum_occurrences["createCustomApp:::file_key"]=1
-operation_parameters_minimum_occurrences["createCustomApp:::install_enforcement"]=1
-operation_parameters_minimum_occurrences["createCustomApp:::install_type"]=1
 operation_parameters_minimum_occurrences["createCustomApp:::name"]=1
+operation_parameters_minimum_occurrences["createCustomApp:::file_key"]=1
+operation_parameters_minimum_occurrences["createCustomApp:::install_type"]=1
+operation_parameters_minimum_occurrences["createCustomApp:::install_enforcement"]=1
+operation_parameters_minimum_occurrences["createCustomApp:::show_in_self_service"]=1
 operation_parameters_minimum_occurrences["createCustomApp:::self_service_category_id"]=1
 operation_parameters_minimum_occurrences["createCustomApp:::self_service_recommended"]=1
-operation_parameters_minimum_occurrences["createCustomApp:::show_in_self_service"]=1
 operation_parameters_minimum_occurrences["deleteCustomApp:::library_item_id"]=1
 operation_parameters_minimum_occurrences["getCustomApp:::library_item_id"]=1
 operation_parameters_minimum_occurrences["listCustomApps:::page"]=0
 operation_parameters_minimum_occurrences["updateCustomApp:::library_item_id"]=1
-operation_parameters_minimum_occurrences["updateCustomApp:::active"]=1
 operation_parameters_minimum_occurrences["updateCustomApp:::name"]=1
+operation_parameters_minimum_occurrences["updateCustomApp:::active"]=1
 operation_parameters_minimum_occurrences["uploadCustomApp:::body"]=0
-operation_parameters_minimum_occurrences["createCustomProfile:::active"]=1
-operation_parameters_minimum_occurrences["createCustomProfile:::file"]=1
 operation_parameters_minimum_occurrences["createCustomProfile:::name"]=1
+operation_parameters_minimum_occurrences["createCustomProfile:::file"]=1
+operation_parameters_minimum_occurrences["createCustomProfile:::active"]=1
 operation_parameters_minimum_occurrences["deleteCustomProfile:::library_item_id"]=1
 operation_parameters_minimum_occurrences["getCustomProfile:::library_item_id"]=1
 operation_parameters_minimum_occurrences["listCustomProfiles:::page"]=0
@@ -236,6 +236,17 @@ operation_parameters_minimum_occurrences["getActivationLockBypassCode:::device_i
 operation_parameters_minimum_occurrences["getFilevaultRecoveryKey:::device_id"]=1
 operation_parameters_minimum_occurrences["getRecoveryLockPassword:::device_id"]=1
 operation_parameters_minimum_occurrences["getUnlockPin:::device_id"]=1
+operation_parameters_minimum_occurrences["createInhouseApp:::Content-Type"]=1
+operation_parameters_minimum_occurrences["createInhouseApp:::body"]=0
+operation_parameters_minimum_occurrences["deleteInhouseApp:::library_item_id"]=1
+operation_parameters_minimum_occurrences["getInhouseApp:::library_item_id"]=1
+operation_parameters_minimum_occurrences["listInhouseApps:::page"]=0
+operation_parameters_minimum_occurrences["updateInhouseApp:::library_item_id"]=1
+operation_parameters_minimum_occurrences["updateInhouseApp:::Content-Type"]=1
+operation_parameters_minimum_occurrences["updateInhouseApp:::body"]=0
+operation_parameters_minimum_occurrences["uploadInhouseApp:::Content-Type"]=1
+operation_parameters_minimum_occurrences["uploadInhouseApp:::body"]=0
+operation_parameters_minimum_occurrences["uploadInhouseAppStatus:::pending_upload_id"]=1
 operation_parameters_minimum_occurrences["getLibraryItemActivity:::library_item_id"]=1
 operation_parameters_minimum_occurrences["getLibraryItemActivity:::activity_type"]=0
 operation_parameters_minimum_occurrences["getLibraryItemActivity:::user_id"]=0
@@ -384,9 +395,9 @@ operation_parameters_minimum_occurrences["listUsers:::archived"]=0
 # 0 - unlimited
 declare -A operation_parameters_maximum_occurrences
 operation_parameters_maximum_occurrences["createAdeIntegration:::blueprint_id"]=0
+operation_parameters_maximum_occurrences["createAdeIntegration:::phone"]=0
 operation_parameters_maximum_occurrences["createAdeIntegration:::email"]=0
 operation_parameters_maximum_occurrences["createAdeIntegration:::file"]=0
-operation_parameters_maximum_occurrences["createAdeIntegration:::phone"]=0
 operation_parameters_maximum_occurrences["deleteAdeIntegration:::ade_token_id"]=0
 operation_parameters_maximum_occurrences["getAdeDevice:::device_id"]=0
 operation_parameters_maximum_occurrences["getAdeIntegration:::ade_token_id"]=0
@@ -403,20 +414,20 @@ operation_parameters_maximum_occurrences["listDevicesAssociatedToAdeToken:::ade_
 operation_parameters_maximum_occurrences["listDevicesAssociatedToAdeToken:::page"]=0
 operation_parameters_maximum_occurrences["renewAdeIntegration:::ade_token_id"]=0
 operation_parameters_maximum_occurrences["renewAdeIntegration:::blueprint_id"]=0
+operation_parameters_maximum_occurrences["renewAdeIntegration:::phone"]=0
 operation_parameters_maximum_occurrences["renewAdeIntegration:::email"]=0
 operation_parameters_maximum_occurrences["renewAdeIntegration:::file"]=0
-operation_parameters_maximum_occurrences["renewAdeIntegration:::phone"]=0
 operation_parameters_maximum_occurrences["updateAdeDevice:::device_id"]=0
 operation_parameters_maximum_occurrences["updateAdeDevice:::body"]=0
 operation_parameters_maximum_occurrences["updateAdeIntegration:::ade_token_id"]=0
 operation_parameters_maximum_occurrences["updateAdeIntegration:::body"]=0
 operation_parameters_maximum_occurrences["assignLibraryItem:::blueprint_id"]=0
 operation_parameters_maximum_occurrences["assignLibraryItem:::body"]=0
-operation_parameters_maximum_occurrences["createBlueprint:::enrollment_code.code"]=0
-operation_parameters_maximum_occurrences["createBlueprint:::enrollment_code.is_active"]=0
 operation_parameters_maximum_occurrences["createBlueprint:::name"]=0
-operation_parameters_maximum_occurrences["createBlueprint:::source.id"]=0
+operation_parameters_maximum_occurrences["createBlueprint:::enrollment_code.is_active"]=0
+operation_parameters_maximum_occurrences["createBlueprint:::enrollment_code.code"]=0
 operation_parameters_maximum_occurrences["createBlueprint:::source.type"]=0
+operation_parameters_maximum_occurrences["createBlueprint:::source.id"]=0
 operation_parameters_maximum_occurrences["createBlueprint:::type"]=0
 operation_parameters_maximum_occurrences["deleteBlueprint:::blueprint_id"]=0
 operation_parameters_maximum_occurrences["getBlueprint:::blueprint_id"]=0
@@ -433,27 +444,27 @@ operation_parameters_maximum_occurrences["listLibraryItems:::blueprint_id"]=0
 operation_parameters_maximum_occurrences["removeLibraryItem:::blueprint_id"]=0
 operation_parameters_maximum_occurrences["removeLibraryItem:::body"]=0
 operation_parameters_maximum_occurrences["updateBlueprint:::blueprint_id"]=0
+operation_parameters_maximum_occurrences["updateBlueprint:::name"]=0
 operation_parameters_maximum_occurrences["updateBlueprint:::description"]=0
 operation_parameters_maximum_occurrences["updateBlueprint:::enrollment_code.code"]=0
 operation_parameters_maximum_occurrences["updateBlueprint:::enrollment_code.is_active"]=0
-operation_parameters_maximum_occurrences["updateBlueprint:::name"]=0
-operation_parameters_maximum_occurrences["createCustomApp:::file_key"]=0
-operation_parameters_maximum_occurrences["createCustomApp:::install_enforcement"]=0
-operation_parameters_maximum_occurrences["createCustomApp:::install_type"]=0
 operation_parameters_maximum_occurrences["createCustomApp:::name"]=0
+operation_parameters_maximum_occurrences["createCustomApp:::file_key"]=0
+operation_parameters_maximum_occurrences["createCustomApp:::install_type"]=0
+operation_parameters_maximum_occurrences["createCustomApp:::install_enforcement"]=0
+operation_parameters_maximum_occurrences["createCustomApp:::show_in_self_service"]=0
 operation_parameters_maximum_occurrences["createCustomApp:::self_service_category_id"]=0
 operation_parameters_maximum_occurrences["createCustomApp:::self_service_recommended"]=0
-operation_parameters_maximum_occurrences["createCustomApp:::show_in_self_service"]=0
 operation_parameters_maximum_occurrences["deleteCustomApp:::library_item_id"]=0
 operation_parameters_maximum_occurrences["getCustomApp:::library_item_id"]=0
 operation_parameters_maximum_occurrences["listCustomApps:::page"]=0
 operation_parameters_maximum_occurrences["updateCustomApp:::library_item_id"]=0
-operation_parameters_maximum_occurrences["updateCustomApp:::active"]=0
 operation_parameters_maximum_occurrences["updateCustomApp:::name"]=0
+operation_parameters_maximum_occurrences["updateCustomApp:::active"]=0
 operation_parameters_maximum_occurrences["uploadCustomApp:::body"]=0
-operation_parameters_maximum_occurrences["createCustomProfile:::active"]=0
-operation_parameters_maximum_occurrences["createCustomProfile:::file"]=0
 operation_parameters_maximum_occurrences["createCustomProfile:::name"]=0
+operation_parameters_maximum_occurrences["createCustomProfile:::file"]=0
+operation_parameters_maximum_occurrences["createCustomProfile:::active"]=0
 operation_parameters_maximum_occurrences["deleteCustomProfile:::library_item_id"]=0
 operation_parameters_maximum_occurrences["getCustomProfile:::library_item_id"]=0
 operation_parameters_maximum_occurrences["listCustomProfiles:::page"]=0
@@ -523,6 +534,17 @@ operation_parameters_maximum_occurrences["getActivationLockBypassCode:::device_i
 operation_parameters_maximum_occurrences["getFilevaultRecoveryKey:::device_id"]=0
 operation_parameters_maximum_occurrences["getRecoveryLockPassword:::device_id"]=0
 operation_parameters_maximum_occurrences["getUnlockPin:::device_id"]=0
+operation_parameters_maximum_occurrences["createInhouseApp:::Content-Type"]=0
+operation_parameters_maximum_occurrences["createInhouseApp:::body"]=0
+operation_parameters_maximum_occurrences["deleteInhouseApp:::library_item_id"]=0
+operation_parameters_maximum_occurrences["getInhouseApp:::library_item_id"]=0
+operation_parameters_maximum_occurrences["listInhouseApps:::page"]=0
+operation_parameters_maximum_occurrences["updateInhouseApp:::library_item_id"]=0
+operation_parameters_maximum_occurrences["updateInhouseApp:::Content-Type"]=0
+operation_parameters_maximum_occurrences["updateInhouseApp:::body"]=0
+operation_parameters_maximum_occurrences["uploadInhouseApp:::Content-Type"]=0
+operation_parameters_maximum_occurrences["uploadInhouseApp:::body"]=0
+operation_parameters_maximum_occurrences["uploadInhouseAppStatus:::pending_upload_id"]=0
 operation_parameters_maximum_occurrences["getLibraryItemActivity:::library_item_id"]=0
 operation_parameters_maximum_occurrences["getLibraryItemActivity:::activity_type"]=0
 operation_parameters_maximum_occurrences["getLibraryItemActivity:::user_id"]=0
@@ -668,9 +690,9 @@ operation_parameters_maximum_occurrences["listUsers:::archived"]=0
 # - multi, csv, ssv, tsv
 declare -A operation_parameters_collection_type
 operation_parameters_collection_type["createAdeIntegration:::blueprint_id"]=""
+operation_parameters_collection_type["createAdeIntegration:::phone"]=""
 operation_parameters_collection_type["createAdeIntegration:::email"]=""
 operation_parameters_collection_type["createAdeIntegration:::file"]=""
-operation_parameters_collection_type["createAdeIntegration:::phone"]=""
 operation_parameters_collection_type["deleteAdeIntegration:::ade_token_id"]=""
 operation_parameters_collection_type["getAdeDevice:::device_id"]=""
 operation_parameters_collection_type["getAdeIntegration:::ade_token_id"]=""
@@ -687,20 +709,20 @@ operation_parameters_collection_type["listDevicesAssociatedToAdeToken:::ade_toke
 operation_parameters_collection_type["listDevicesAssociatedToAdeToken:::page"]=""
 operation_parameters_collection_type["renewAdeIntegration:::ade_token_id"]=""
 operation_parameters_collection_type["renewAdeIntegration:::blueprint_id"]=""
+operation_parameters_collection_type["renewAdeIntegration:::phone"]=""
 operation_parameters_collection_type["renewAdeIntegration:::email"]=""
 operation_parameters_collection_type["renewAdeIntegration:::file"]=""
-operation_parameters_collection_type["renewAdeIntegration:::phone"]=""
 operation_parameters_collection_type["updateAdeDevice:::device_id"]=""
 operation_parameters_collection_type["updateAdeDevice:::body"]=""
 operation_parameters_collection_type["updateAdeIntegration:::ade_token_id"]=""
 operation_parameters_collection_type["updateAdeIntegration:::body"]=""
 operation_parameters_collection_type["assignLibraryItem:::blueprint_id"]=""
 operation_parameters_collection_type["assignLibraryItem:::body"]=""
-operation_parameters_collection_type["createBlueprint:::enrollment_code.code"]=""
-operation_parameters_collection_type["createBlueprint:::enrollment_code.is_active"]=""
 operation_parameters_collection_type["createBlueprint:::name"]=""
-operation_parameters_collection_type["createBlueprint:::source.id"]=""
+operation_parameters_collection_type["createBlueprint:::enrollment_code.is_active"]=""
+operation_parameters_collection_type["createBlueprint:::enrollment_code.code"]=""
 operation_parameters_collection_type["createBlueprint:::source.type"]=""
+operation_parameters_collection_type["createBlueprint:::source.id"]=""
 operation_parameters_collection_type["createBlueprint:::type"]=""
 operation_parameters_collection_type["deleteBlueprint:::blueprint_id"]=""
 operation_parameters_collection_type["getBlueprint:::blueprint_id"]=""
@@ -717,27 +739,27 @@ operation_parameters_collection_type["listLibraryItems:::blueprint_id"]=""
 operation_parameters_collection_type["removeLibraryItem:::blueprint_id"]=""
 operation_parameters_collection_type["removeLibraryItem:::body"]=""
 operation_parameters_collection_type["updateBlueprint:::blueprint_id"]=""
+operation_parameters_collection_type["updateBlueprint:::name"]=""
 operation_parameters_collection_type["updateBlueprint:::description"]=""
 operation_parameters_collection_type["updateBlueprint:::enrollment_code.code"]=""
 operation_parameters_collection_type["updateBlueprint:::enrollment_code.is_active"]=""
-operation_parameters_collection_type["updateBlueprint:::name"]=""
-operation_parameters_collection_type["createCustomApp:::file_key"]=""
-operation_parameters_collection_type["createCustomApp:::install_enforcement"]=""
-operation_parameters_collection_type["createCustomApp:::install_type"]=""
 operation_parameters_collection_type["createCustomApp:::name"]=""
+operation_parameters_collection_type["createCustomApp:::file_key"]=""
+operation_parameters_collection_type["createCustomApp:::install_type"]=""
+operation_parameters_collection_type["createCustomApp:::install_enforcement"]=""
+operation_parameters_collection_type["createCustomApp:::show_in_self_service"]=""
 operation_parameters_collection_type["createCustomApp:::self_service_category_id"]=""
 operation_parameters_collection_type["createCustomApp:::self_service_recommended"]=""
-operation_parameters_collection_type["createCustomApp:::show_in_self_service"]=""
 operation_parameters_collection_type["deleteCustomApp:::library_item_id"]=""
 operation_parameters_collection_type["getCustomApp:::library_item_id"]=""
 operation_parameters_collection_type["listCustomApps:::page"]=""
 operation_parameters_collection_type["updateCustomApp:::library_item_id"]=""
-operation_parameters_collection_type["updateCustomApp:::active"]=""
 operation_parameters_collection_type["updateCustomApp:::name"]=""
+operation_parameters_collection_type["updateCustomApp:::active"]=""
 operation_parameters_collection_type["uploadCustomApp:::body"]=""
-operation_parameters_collection_type["createCustomProfile:::active"]=""
-operation_parameters_collection_type["createCustomProfile:::file"]=""
 operation_parameters_collection_type["createCustomProfile:::name"]=""
+operation_parameters_collection_type["createCustomProfile:::file"]=""
+operation_parameters_collection_type["createCustomProfile:::active"]=""
 operation_parameters_collection_type["deleteCustomProfile:::library_item_id"]=""
 operation_parameters_collection_type["getCustomProfile:::library_item_id"]=""
 operation_parameters_collection_type["listCustomProfiles:::page"]=""
@@ -807,6 +829,17 @@ operation_parameters_collection_type["getActivationLockBypassCode:::device_id"]=
 operation_parameters_collection_type["getFilevaultRecoveryKey:::device_id"]=""
 operation_parameters_collection_type["getRecoveryLockPassword:::device_id"]=""
 operation_parameters_collection_type["getUnlockPin:::device_id"]=""
+operation_parameters_collection_type["createInhouseApp:::Content-Type"]=""
+operation_parameters_collection_type["createInhouseApp:::body"]=""
+operation_parameters_collection_type["deleteInhouseApp:::library_item_id"]=""
+operation_parameters_collection_type["getInhouseApp:::library_item_id"]=""
+operation_parameters_collection_type["listInhouseApps:::page"]=""
+operation_parameters_collection_type["updateInhouseApp:::library_item_id"]=""
+operation_parameters_collection_type["updateInhouseApp:::Content-Type"]=""
+operation_parameters_collection_type["updateInhouseApp:::body"]=""
+operation_parameters_collection_type["uploadInhouseApp:::Content-Type"]=""
+operation_parameters_collection_type["uploadInhouseApp:::body"]=""
+operation_parameters_collection_type["uploadInhouseAppStatus:::pending_upload_id"]=""
 operation_parameters_collection_type["getLibraryItemActivity:::library_item_id"]=""
 operation_parameters_collection_type["getLibraryItemActivity:::activity_type"]=""
 operation_parameters_collection_type["getLibraryItemActivity:::user_id"]=""
@@ -1440,6 +1473,18 @@ read -r -d '' ops <<EOF
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
+    echo -e "${BOLD}${WHITE}[inHouseApps]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}createInhouseApp${OFF};Create In-House App (AUTH)
+  ${CYAN}deleteInhouseApp${OFF};Delete In-House App (AUTH)
+  ${CYAN}getInhouseApp${OFF};Get In-House App (AUTH)
+  ${CYAN}listInhouseApps${OFF};List In-House Apps (AUTH)
+  ${CYAN}updateInhouseApp${OFF};Update In-House App (AUTH)
+  ${CYAN}uploadInhouseApp${OFF};Upload In-House App (AUTH)
+  ${CYAN}uploadInhouseAppStatus${OFF};Upload In-House App Status (AUTH)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
     echo -e "${BOLD}${WHITE}[libraryItems]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}getLibraryItemActivity${OFF};Get Library Item Activity (AUTH)
@@ -1552,7 +1597,7 @@ print_about() {
     echo -e "${BOLD}${WHITE}Kandji API command line client (API version 1.0.0)${OFF}"
     echo ""
     echo -e "License: MIT License"
-    echo -e "Contact: mitchelsblake@gmail.com"
+    echo -e "Contact: "
     echo ""
 read -r -d '' appdescription <<EOF
 
@@ -1562,11 +1607,11 @@ read -r -d '' appdescription <<EOF
 <li><p>US - <code>https://SubDomain.api.kandji.io</code></p>
 </li>
 <li><p>EU - <code>https://SubDomain.api.eu.kandji.io</code></p>
- </li>
+</li>
 </ul>
 <p>For information on how to obtain an API token, please refer to the following support article.</p>
 <p><a href=&quot;https://support.kandji.io/api&quot;>https://support.kandji.io/api</a></p>
- <h4 id=&quot;rate-limit&quot;>Rate Limit</h4>
+<h4 id=&quot;rate-limit&quot;>Rate Limit</h4>
 <p>The Kandji API currently has an API rate limit of 10,000 requests per hour per customer.</p>
 <h4 id=&quot;request-methods&quot;>Request Methods</h4>
 <p>HTTP request methods supported by the Kandji API.</p>
@@ -1575,7 +1620,7 @@ read -r -d '' appdescription <<EOF
 <tr>
 <th>Method</th>
 <th>Definition</th>
- </tr>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -1584,8 +1629,8 @@ read -r -d '' appdescription <<EOF
 </tr>
 <tr>
 <td>POST</td>
- <td>The <code>POST</code> method submits an entity to the specified resource.</td>
- </tr>
+<td>The <code>POST</code> method submits an entity to the specified resource.</td>
+</tr>
 <tr>
 <td>PATCH</td>
 <td>The <code>PATCH</code> method applies partial modifications to a resource.</td>
@@ -1599,7 +1644,7 @@ read -r -d '' appdescription <<EOF
 </div><h4 id=&quot;response-codes&quot;>Response codes</h4>
 <p>Not all response codes apply to every endpoint.</p>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
- <thead>
+<thead>
 <tr>
 <th>Code</th>
 <th>Response</th>
@@ -1607,14 +1652,14 @@ read -r -d '' appdescription <<EOF
 </thead>
 <tbody>
 <tr>
- <td>200</td>
+<td>200</td>
 <td>OK</td>
 </tr>
 <tr>
 <td>201</td>
 <td>Created</td>
 </tr>
- <tr>
+<tr>
 <td>204</td>
 <td>No content</td>
 </tr>
@@ -1625,35 +1670,35 @@ read -r -d '' appdescription <<EOF
 <tr>
 <td>400</td>
 <td>Bad Request</td>
- </tr>
+</tr>
 <tr>
 <td></td>
 <td>&quot;Command already running&quot; - The command may already be running in a <em>Pending</em> state waiting on the device.</td>
- </tr>
+</tr>
 <tr>
 <td></td>
 <td>&quot;Command is not allowed for current device&quot; - The command may not be compatible with the target device.</td>
 </tr>
 <tr>
- <td></td>
+<td></td>
 <td>&quot;JSON parse error - Expecting ',' delimiter: line 3 column 2 (char 65)&quot;</td>
 </tr>
 <tr>
 <td>401</td>
 <td>Unauthorized</td>
 </tr>
- <tr>
+<tr>
 <td></td>
 <td>This error can occur if the token is incorrect, was revoked, or the token has expired.</td>
 </tr>
 <tr>
 <td>403</td>
 <td>Forbidden</td>
- </tr>
+</tr>
 <tr>
 <td></td>
 <td>The request was understood but cannot be authorized.</td>
- </tr>
+</tr>
 <tr>
 <td>404</td>
 <td>Not found</td>
@@ -1664,14 +1709,14 @@ read -r -d '' appdescription <<EOF
 </tr>
 <tr>
 <td>415</td>
- <td>Unsupported Media Type</td>
+<td>Unsupported Media Type</td>
 </tr>
 <tr>
 <td></td>
 <td>The request contains a media type which the server or resource does not support.</td>
 </tr>
 <tr>
- <td>500</td>
+<td>500</td>
 <td>Internal server error</td>
 </tr>
 <tr>
@@ -1684,10 +1729,10 @@ read -r -d '' appdescription <<EOF
 </tr>
 </tbody>
 </table>
- </div><h4 id=&quot;data-structure&quot;>Data structure</h4>
+</div><h4 id=&quot;data-structure&quot;>Data structure</h4>
 <p>The API returns all structured responses in JSON schema format.</p>
 <h4 id=&quot;examples&quot;>Examples</h4>
- <p>Code examples using the API can be found in the Kandji support <a href=&quot;https://github.com/kandji-inc/support/tree/main/api-tools&quot;>GitHub</a>.</p>
+<p>Code examples using the API can be found in the Kandji support <a href=&quot;https://github.com/kandji-inc/support/tree/main/api-tools&quot;>GitHub</a>.</p>
 </body></html>
 EOF
 echo "$appdescription" | paste -sd' ' | fold -sw 80
@@ -1723,20 +1768,20 @@ print_createAdeIntegration_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -1759,14 +1804,14 @@ print_deleteAdeIntegration_help() {
     code=204
     echo -e "${result_color_table[${code:0:1}]}  204;No Content${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Set-Cookie${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Set-Cookie${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -1790,16 +1835,16 @@ print_downloadAdePublicKey_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Set-Cookie${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Set-Cookie${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -1912,7 +1957,7 @@ print_listDevicesAssociatedToAdeToken_help() {
     echo -e ""
     echo -e "<p>This request returns a list of devices associated with a specified <code>ade_token_id</code> as well as their enrollment status.</p>
 <p>When the <code>mdm_device</code> key value is <code>null</code>, this can be taken as an indication that the device is awaiting enrollment into Kandji.</p>
- <p>When data is present within the mdm_device dictionary, you can reference the <code>device_id</code> as the ID of the enrolled device record.</p>" | paste -sd' ' | fold -sw 80
+<p>When data is present within the mdm_device dictionary, you can reference the <code>device_id</code> as the ID of the enrolled device record.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}ade_token_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: ade_token_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1923,16 +1968,16 @@ print_listDevicesAssociatedToAdeToken_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Set-Cookie${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Set-Cookie${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -1949,7 +1994,7 @@ print_renewAdeIntegration_help() {
     echo -e "${BOLD}${WHITE}renewAdeIntegration - Renew ADE integration${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This request will renew an existing ADE integration.</p>
- <p>The default <code>blueprint_id</code>, <code>phone</code> number, <code>email</code> address, and MDM server token <code>file</code> from the associated MDM server in ABM are required and must be sent in the request.</p>" | paste -sd' ' | fold -sw 80
+<p>The default <code>blueprint_id</code>, <code>phone</code> number, <code>email</code> address, and MDM server token <code>file</code> from the associated MDM server in ABM are required and must be sent in the request.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}ade_token_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: ade_token_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2018,19 +2063,19 @@ print_assignLibraryItem_help() {
 <h3 id=&quot;request-body&quot;>Request Body</h3>
 <ul>
 <li><p><code>library_item_id</code> (string, required)</p>
- </li>
+</li>
 <li><p><code>assignment_node_id</code> (string, required for maps)</p>
- <ul>
+<ul>
 <li>Note: To find the assignment_node_id, view the map in a browser. Then, on your keyboard, press and hold the Option ⌥ key. Each node ID remains fixed for the lifespan of the node on the map.</li>
 </ul>
 </li>
 </ul>
- <h3 id=&quot;error-responses&quot;>Error responses</h3>
+<h3 id=&quot;error-responses&quot;>Error responses</h3>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
 <thead>
 <tr>
 <th><strong>Code</strong></th>
- <th><strong>Body</strong></th>
+<th><strong>Body</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -2048,8 +2093,8 @@ print_assignLibraryItem_help() {
 </tr>
 <tr>
 <td></td>
- <td>&quot;assignment_node_id cannot be provided for Classic Blueprint&quot;</td>
- </tr>
+<td>&quot;assignment_node_id cannot be provided for Classic Blueprint&quot;</td>
+</tr>
 <tr>
 <td></td>
 <td>&quot;Must provide assignment_node_id for Assignment Map Blueprint&quot;</td>
@@ -2067,18 +2112,18 @@ print_assignLibraryItem_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2091,7 +2136,7 @@ print_createBlueprint_help() {
     echo -e ""
     echo -e "<p>This request creates a new empty Blueprint or a new Blueprint from a template. The keys <code>name</code> and <code>enrollment_code</code> <code>is_active</code> are required, and the blueprint name key must be unique from the existing blueprint names in the Kandji tenant.</p>
 <p>optionally, <code>type: map</code> can be used when creating a new Assignment Map blueprint.</p>
- <p>Note: If cloning an existing blueprint,'type' value and the type of sourced ('source.id') blueprint must match and 'source.type' value must be set to 'blueprint'.</p>" | paste -sd' ' | fold -sw 80
+<p>Note: If cloning an existing blueprint,'type' value and the type of sourced ('source.id') blueprint must match and 'source.type' value must be set to 'blueprint'.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo ""
@@ -2147,20 +2192,20 @@ print_getBlueprint_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2198,7 +2243,7 @@ print_getManualEnrollmentProfile_help() {
 </li>
 <li><p><code>Content-Disposition</code> = <code>attachment;filename=kandji-enroll.mobileconfig</code></p>
 </li>
- </ul>
+</ul>
 <p>An optional query parameter <code>sso=true</code> can be used to return a URL for SSO authentication instead. If this query parameter is used for a Blueprint that does not require authentication, then the enrollment profile will be returned.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>" | paste -sd' ' | fold -sw 80
@@ -2212,17 +2257,14 @@ print_getManualEnrollmentProfile_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Disposition${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Language${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -2230,10 +2272,7 @@ print_getManualEnrollmentProfile_help() {
         echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -2242,8 +2281,14 @@ print_getManualEnrollmentProfile_help() {
         echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2272,20 +2317,20 @@ print_listBlueprints_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2304,9 +2349,9 @@ print_listLibraryItems_help() {
 <li><p><code>count</code> (int): The total count of library items.</p>
 </li>
 <li><p><code>next</code> (str): The URL for the next page of results, if available. If not available will value will be <code>null</code>.</p>
- </li>
+</li>
 <li><p><code>previous</code> (str): The URL for the previous page of results, if available. If not available will value will be <code>null</code>.</p>
- </li>
+</li>
 <li><p><code>results</code> (object): An array containing objects with the following fields:</p>
 <ul>
 <li><p><code>id</code> (str): The ID of the library item.</p>
@@ -2324,15 +2369,12 @@ print_listLibraryItems_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -2340,10 +2382,7 @@ print_listLibraryItems_help() {
         echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -2352,8 +2391,14 @@ print_listLibraryItems_help() {
         echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}transfer-encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
@@ -2371,23 +2416,23 @@ print_removeLibraryItem_help() {
 <h3 id=&quot;request-body&quot;>Request Body</h3>
 <ul>
 <li><p><code>library_item_id</code> (string, required)</p>
- </li>
+</li>
 <li><p><code>assignment_node_id</code> (string, required for maps)</p>
- </li>
+</li>
 </ul>
 <h3 id=&quot;error-responses&quot;>Error responses</h3>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
 <thead>
- <tr>
+<tr>
 <th><strong>Code</strong></th>
 <th><strong>Body</strong></th>
 </tr>
- </thead>
+</thead>
 <tbody>
 <tr>
 <td>400 - Bad Request</td>
 <td>Bad Request</td>
- </tr>
+</tr>
 <tr>
 <td></td>
 <td>&quot;assignment_node_id cannot be provided for Classic Blueprint&quot;</td>
@@ -2397,9 +2442,9 @@ print_removeLibraryItem_help() {
 <td>&quot;Must provide assignment_node_id for Assignment Map Blueprint&quot;</td>
 </tr>
 <tr>
- <td></td>
+<td></td>
 <td>&quot;Library Item does not exist on Blueprint&quot;</td>
- </tr>
+</tr>
 <tr>
 <td></td>
 <td>&quot;Library Item does not exist in Assignment Node&quot;</td>
@@ -2417,18 +2462,18 @@ print_removeLibraryItem_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2440,7 +2485,7 @@ print_updateBlueprint_help() {
     echo -e "${BOLD}${WHITE}updateBlueprint - Update Blueprint${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This requests allows updating of the name, icon, icon color, description, enrollment code, and active status on an existing blueprint.</p>
- <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
+<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>blueprint_id</code> (path parameter): The unique identifier of the blueprint.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
@@ -2450,20 +2495,20 @@ print_updateBlueprint_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2483,18 +2528,18 @@ print_createCustomApp_help() {
     code=201
     echo -e "${result_color_table[${code:0:1}]}  201;Created${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2507,7 +2552,7 @@ print_deleteCustomApp_help() {
     echo -e ""
     echo -e "<p>NOTICE: This is permanent so be careful.</p>
 <p>This endpoint sends a request to delete a specific custom app from the Kandji library.</p>
- <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
+<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
@@ -2517,28 +2562,25 @@ print_deleteCustomApp_help() {
     code=204
     echo -e "${result_color_table[${code:0:1}]}  204;No Content${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;Not Found${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -2546,10 +2588,7 @@ print_deleteCustomApp_help() {
         echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -2558,8 +2597,14 @@ print_deleteCustomApp_help() {
         echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}transfer-encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
@@ -2582,18 +2627,18 @@ print_getCustomApp_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2614,18 +2659,18 @@ print_listCustomApps_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2648,18 +2693,18 @@ print_updateCustomApp_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2683,18 +2728,18 @@ print_uploadCustomApp_help() {
     code=201
     echo -e "${result_color_table[${code:0:1}]}  201;Created${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2713,18 +2758,18 @@ print_createCustomProfile_help() {
     code=201
     echo -e "${result_color_table[${code:0:1}]}  201;Created${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2737,7 +2782,7 @@ print_deleteCustomProfile_help() {
     echo -e ""
     echo -e "<p>NOTICE: This is permanent so be careful.</p>
 <p>This endpoint sends a request to delete a specific custom profile from the Kandji library.</p>
- <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
+<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
@@ -2747,28 +2792,25 @@ print_deleteCustomProfile_help() {
     code=204
     echo -e "${result_color_table[${code:0:1}]}  204;No Content${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;Not Found${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -2776,10 +2818,7 @@ print_deleteCustomProfile_help() {
         echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -2788,8 +2827,14 @@ print_deleteCustomProfile_help() {
         echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}transfer-encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
@@ -2812,18 +2857,18 @@ print_getCustomProfile_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2844,18 +2889,18 @@ print_listCustomProfiles_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2868,7 +2913,7 @@ print_updateCustomProfile_help() {
     echo -e ""
     echo -e "<p>This request allows you to update a custom profile in the Kandji library.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
- <p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2877,18 +2922,18 @@ print_updateCustomProfile_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2909,18 +2954,18 @@ print_createCustomScript_help() {
     code=201
     echo -e "${result_color_table[${code:0:1}]}  201;Created${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -2933,7 +2978,7 @@ print_deleteCustomScript_help() {
     echo -e ""
     echo -e "<p>NOTICE: This is permanent so be careful.</p>
 <p>This endpoint sends a request to delete a specific custom scripts from the Kandji library.</p>
- <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
+<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
@@ -2943,28 +2988,25 @@ print_deleteCustomScript_help() {
     code=204
     echo -e "${result_color_table[${code:0:1}]}  204;No Content${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;Not Found${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -2972,10 +3014,7 @@ print_deleteCustomScript_help() {
         echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -2984,8 +3023,14 @@ print_deleteCustomScript_help() {
         echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}transfer-encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
@@ -3008,18 +3053,18 @@ print_getCustomScript_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3040,15 +3085,12 @@ print_listCustomScripts_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -3056,10 +3098,7 @@ print_listCustomScripts_help() {
         echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -3068,8 +3107,14 @@ print_listCustomScripts_help() {
         echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}transfer-encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
@@ -3092,15 +3137,12 @@ print_updateCustomScript_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -3108,10 +3150,7 @@ print_updateCustomScript_help() {
         echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -3120,8 +3159,14 @@ print_updateCustomScript_help() {
         echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}transfer-encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
@@ -3142,19 +3187,19 @@ print_clearPasscode_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3185,7 +3230,7 @@ print_deleteUser_help() {
     echo -e ""
     echo -e "<p>This endpoint sends an MDM command to delete a local user account on macOS and Shared iPad (Device Supervision via Automated Device Enrollment is required).</p>
 <p><strong>Request Body Parameters</strong>: application/json</p>
- <hr />
+<hr />
 <p><code>DeleteAllUsers</code> - <code>boolean</code></p>
 <p><code>ForceDeletion</code> - <code>boolean</code></p>
 <p><code>UserName</code> - <code>string</code></p>" | paste -sd' ' | fold -sw 80
@@ -3209,44 +3254,44 @@ print_eraseDevice_help() {
     echo -e "${BOLD}${WHITE}eraseDevice - Erase Device${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This endpoint sends an MDM command to erase the device.</p>
- <p>iOS 4.0+, iPadOS 4.0+, macOS 10.7+, tvOS 10.2+</p>
+<p>iOS 4.0+, iPadOS 4.0+, macOS 10.7+, tvOS 10.2+</p>
 <p><strong>Request Body Parameters: application/json</strong></p>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
 <thead>
 <tr>
 <th>Key</th>
 <th>Type</th>
- <th>Description</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>PIN</code></td>
- <td><code>string</code></td>
+<td><code>string</code></td>
 <td>The six-character PIN for Find My. This value is available in macOS 10.8 and later.</td>
 </tr>
 <tr>
 <td><code>PreserveDataPlan</code></td>
- <td><code>boolean</code></td>
+<td><code>boolean</code></td>
 <td>If true, preserve the data plan on an iPhone or iPad with eSIM functionality, if one exists. This value is available in iOS 11 and later.  <br />  <br />Default: true</td>
 </tr>
 <tr>
 <td><code>DisallowProximitySetup</code></td>
- <td><code>boolean</code></td>
+<td><code>boolean</code></td>
 <td>If true, disable Proximity Setup on the next reboot and skip the pane in Setup Assistant. This value is available in iOS 11 and later. Prior to iOS 14, don’t use this option with any other option.  <br />  <br />Default: false</td>
 </tr>
 <tr>
 <td><code>ReturnToService</code></td>
- <td><code>object</code></td>
+<td><code>object</code></td>
 <td>(iOS 17 and later and iPadOS 17 and later and with Shared iPad ) When sending the erase device command to mobile devices, use this key to enable Return to Service. Include an optional Wi-Fi payload ProfileId to allow the device to connect to a Wi-Fi network automatically after being erased. If a Wi-Fi ProfileId is not provided and the mobile device is not tethered to a Mac to share the network connection, the end-user will be required to select a Wi-Fi network to complete the setup.  <br />  <br />If sent to any macOS computer or to mobile devices on iOS 16 or iPadOS 16 and below, the RTS keys will be ignored, and only the erase device command will be issued to the device.</td>
 </tr>
 <tr>
 <td>- <code>Enabled</code></td>
- <td><code>boolean</code></td>
+<td><code>boolean</code></td>
 <td>(Required) If true, the device tries to re-enroll itself automatically after erasure. The user needs to deactivate all activation locks for this feature to work correctly.</td>
 </tr>
 <tr>
- <td>- <code>ProfileId</code></td>
+<td>- <code>ProfileId</code></td>
 <td><code>string</code></td>
 <td>Profile ID value associated with a Wi-Fi profile payload. This is required when the device doesn’t have ethernet access.</td>
 </tr>
@@ -3283,7 +3328,7 @@ print_getDeviceCommands_help() {
 <li>2 : Command is running</li>
 <li>3 : Command completed</li>
 <li>4 : Command failed</li>
- <li>5 : Command received &quot;Not Now&quot; response</li>
+<li>5 : Command received &quot;Not Now&quot; response</li>
 </ul>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
@@ -3309,21 +3354,21 @@ print_lockDevice_help() {
     echo -e "${BOLD}${WHITE}lockDevice - Lock Device${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This endpoint sends an MDM command to remotely lock a device.</p>
- <p>For macOS clients, an unlock PIN will be created, and returned in the response.</p>
- <blockquote>
+<p>For macOS clients, an unlock PIN will be created, and returned in the response.</p>
+<blockquote>
 <p><strong>Caution !!!</strong><br /><em>For a Mac with Apple silicon running a version of macOS before 11.5 will deactivate the Mac. To reactivate, the Mac requires a network connection and authentication by a Secure Token enabled local administrator.</em></p>
 </blockquote>
 <p>Optionally, a JSON payload can be sent in the request to set a lock message and phone number on the target device.</p>
 <p><strong>Note:</strong> For macOS, although the lock message is displayed on all types of Mac computers, the phone number is displayed only on a Mac with Apple silicon.</p>
 <h4 id=&quot;response-properties&quot;>Response properties</h4>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
- <thead>
+<thead>
 <tr>
 <th>Property</th>
 <th>Description</th>
 <th>Type</th>
 </tr>
- </thead>
+</thead>
 <tbody>
 <tr>
 <td>PIN</td>
@@ -3343,37 +3388,37 @@ print_lockDevice_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
     code=400
     echo -e "${result_color_table[${code:0:1}]}  400;Bad Request${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3393,19 +3438,19 @@ print_reinstallAgent_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3417,9 +3462,9 @@ print_remoteDesktop_help() {
     echo -e "${BOLD}${WHITE}remoteDesktop - Remote Desktop${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This endpoint sends an MDM command to control the Remote Management status on a Mac. This MDM command turns on (or turns off) Remote Management with <em>Observe</em> and <em>Control</em> permissions given to all users*.*</p>
- <p><strong>Request Body Parameters</strong>: application/json</p>
+<p><strong>Request Body Parameters</strong>: application/json</p>
 <hr />
- <p><code>EnableRemoteDesktop</code> - <code>boolean</code></p>" | paste -sd' ' | fold -sw 80
+<p><code>EnableRemoteDesktop</code> - <code>boolean</code></p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -3458,7 +3503,7 @@ print_restartDevice_help() {
     echo -e "${BOLD}${WHITE}restartDevice - Restart Device${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This endpoint sends an MDM command to remotely restart a device.</p>
- <ul>
+<ul>
 <li><p><code>RebuildKernelCache</code> - If <code>true</code>, the system rebuilds the kernel cache during a device restart. If <code>BootstrapTokenAllowedForAuthentication</code> is <code>true</code> inSecurityInfoResponse.SecurityInfo, the device requests the bootstrap token from MDM before executing this command. This value is available in macOS 11 and later. Default: false</p>
 </li>
 <li><p><code>NotifyUser</code> - If <code>true</code>, notifies the user to restart the device at their convenience. Forced restart if the device is at <code>loginwindow</code> with no logged-in users. The user can dismiss the notification and ignore the request. No further notifications display unless you resend the command. This value is available in macOS 11.3 and later. Default: false</p>
@@ -3474,19 +3519,19 @@ print_restartDevice_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3498,7 +3543,7 @@ print_sendBlankpush_help() {
     echo -e "${BOLD}${WHITE}sendBlankpush - Send Blankpush${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This endpoint sends an MDM command to initiate a blank push.</p>
- <p><a href=&quot;https://support.kandji.io/what-is-a-blank-push&quot;>Using the Blank Push command</a></p>" | paste -sd' ' | fold -sw 80
+<p><a href=&quot;https://support.kandji.io/what-is-a-blank-push&quot;>Using the Blank Push command</a></p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -3507,19 +3552,19 @@ print_sendBlankpush_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3531,9 +3576,9 @@ print_setName_help() {
     echo -e "${BOLD}${WHITE}setName - Set Name${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>This endpoint sends an MDM command to set the device name.</p>
- <p><strong>Request Body Parameters</strong>: application/json</p>
+<p><strong>Request Body Parameters</strong>: application/json</p>
 <hr />
- <p><code>DeviceName</code> - <code>string</code></p>" | paste -sd' ' | fold -sw 80
+<p><code>DeviceName</code> - <code>string</code></p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -3544,19 +3589,19 @@ print_setName_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3576,19 +3621,19 @@ print_shutdown_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3601,7 +3646,7 @@ print_unlockAccount_help() {
     echo -e ""
     echo -e "<p>This endpoint sends an MDM command to unlock a user account that locked by the system because of too many failed password attempts. Available for macOS.</p>
 <p><strong>Request Body Parameters</strong>: application/json</p>
- <hr />
+<hr />
 <p><code>UserName</code> - <code>string</code></p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
@@ -3613,19 +3658,19 @@ print_unlockAccount_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3645,19 +3690,19 @@ print_updateInventory_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3699,20 +3744,20 @@ print_getDeviceActivity_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3733,23 +3778,23 @@ print_getDeviceApps_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Link${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Total-Count${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Total-Pages${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Link${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3786,9 +3831,9 @@ print_getDeviceLibraryItems_help() {
 <thead>
 <tr>
 <th><strong>Value</strong></th>
- <th><strong>Type</strong></th>
+<th><strong>Type</strong></th>
 <th><strong>Additional Info</strong></th>
- </tr>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -3799,30 +3844,30 @@ print_getDeviceLibraryItems_help() {
 <tr>
 <td>CACHED</td>
 <td>string</td>
- <td>Library item downloaded for install but not yet installed</td>
+<td>Library item downloaded for install but not yet installed</td>
 </tr>
- <tr>
+<tr>
 <td>CHANGE_PENDING</td>
 <td>string</td>
 <td>Recovery Password library item has changes that have not yet been applied</td>
 </tr>
 <tr>
 <td>DOWNLOADING</td>
- <td>string</td>
+<td>string</td>
 <td>Library item downloading</td>
 </tr>
 <tr>
 <td>ERROR</td>
- <td>string</td>
+<td>string</td>
 <td>Audit failure</td>
 </tr>
 <tr>
 <td>EXCLUDED</td>
- <td>string</td>
+<td>string</td>
 <td>Not in scope for assignment rule</td>
 </tr>
 <tr>
- <td>INCOMPATIBLE</td>
+<td>INCOMPATIBLE</td>
 <td>string</td>
 <td>Not compatible with device or OS version</td>
 </tr>
@@ -3839,7 +3884,7 @@ print_getDeviceLibraryItems_help() {
 <tr>
 <td>PENDING</td>
 <td>string</td>
- <td>Waiting on device, not yet installed (All library items except for config profiles)</td>
+<td>Waiting on device, not yet installed (All library items except for config profiles)</td>
 </tr>
 <tr>
 <td>failed</td>
@@ -3849,9 +3894,9 @@ print_getDeviceLibraryItems_help() {
 <tr>
 <td>pending</td>
 <td>string</td>
- <td>Waiting on device, Configuration profile not yet installed</td>
+<td>Waiting on device, Configuration profile not yet installed</td>
 </tr>
- <tr>
+<tr>
 <td>success</td>
 <td>string</td>
 <td>Configuration profile installed</td>
@@ -3867,20 +3912,20 @@ print_getDeviceLibraryItems_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3916,15 +3961,15 @@ print_getDeviceParameters_help() {
     echo -e ""
     echo -e "<p>This request returns the parameters and their statuses for a specified Device ID</p>
 <p>This endpoint is only applicable to macOS clients.</p>
- <p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=&quot;https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations&quot;>https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>
- <p><strong>Possible parameter status values</strong></p>
+<p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=&quot;https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations&quot;>https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>
+<p><strong>Possible parameter status values</strong></p>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
 <thead>
 <tr>
 <th><strong>Value</strong></th>
- <th><strong>Type</strong></th>
+<th><strong>Type</strong></th>
 <th><strong>Additional Info</strong></th>
- </tr>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -3940,21 +3985,21 @@ print_getDeviceParameters_help() {
 <tr>
 <td>PASS</td>
 <td>string</td>
- <td>Device meets requirements</td>
+<td>Device meets requirements</td>
 </tr>
 <tr>
 <td>PENDING</td>
 <td>string</td>
- <td>Waiting on device. Not yet run.</td>
+<td>Waiting on device. Not yet run.</td>
 </tr>
 <tr>
 <td>REMEDIATED</td>
- <td>string</td>
+<td>string</td>
 <td>Parameter remediated</td>
 </tr>
 <tr>
 <td>WARNING</td>
- <td>string</td>
+<td>string</td>
 <td>Muted alert</td>
 </tr>
 </tbody>
@@ -3968,20 +4013,20 @@ print_getDeviceParameters_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3994,28 +4039,28 @@ print_getDeviceStatus_help() {
     echo -e ""
     echo -e "<p>This request returns the full status (parameters and library items) for a specified Device ID.</p>
 <p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=&quot;https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations&quot;>https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>
- <h4 id=&quot;possible-status-values&quot;>Possible status values</h4>
+<h4 id=&quot;possible-status-values&quot;>Possible status values</h4>
 <p><strong>Library items</strong></p>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
- <thead>
+<thead>
 <tr>
 <th><strong>Value</strong></th>
 <th><strong>Type</strong></th>
- <th><strong>Additional Info</strong></th>
+<th><strong>Additional Info</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
- <td>AVAILABLE</td>
+<td>AVAILABLE</td>
 <td>string</td>
 <td>Library item available in Self Service</td>
- </tr>
+</tr>
 <tr>
 <td>ERROR</td>
 <td>string</td>
 <td>Audit failure</td>
 </tr>
- <tr>
+<tr>
 <td>EXCLUDED</td>
 <td>string</td>
 <td>Not in scope for assignment rule</td>
@@ -4028,12 +4073,12 @@ print_getDeviceStatus_help() {
 <tr>
 <td>PASS</td>
 <td>string</td>
- <td>Device meets requirements</td>
+<td>Device meets requirements</td>
 </tr>
 <tr>
 <td>PENDING</td>
 <td>string</td>
- <td>Waiting on device, not yet installed (All library items except for config profiles)</td>
+<td>Waiting on device, not yet installed (All library items except for config profiles)</td>
 </tr>
 <tr>
 <td>failed</td>
@@ -4043,19 +4088,19 @@ print_getDeviceStatus_help() {
 <tr>
 <td>pending</td>
 <td>string</td>
- <td>Waiting on device, Configuration profile not yet installed</td>
+<td>Waiting on device, Configuration profile not yet installed</td>
 </tr>
- <tr>
+<tr>
 <td>success</td>
 <td>string</td>
 <td>Configuration profile installed</td>
- </tr>
+</tr>
 </tbody>
 </table>
 </div><p><strong>Parameters</strong></p>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
 <thead>
- <tr>
+<tr>
 <th><strong>Value</strong></th>
 <th><strong>Type</strong></th>
 <th><strong>Additional Info</strong></th>
@@ -4065,31 +4110,31 @@ print_getDeviceStatus_help() {
 <tr>
 <td>ERROR</td>
 <td>string</td>
- <td>Audit failure</td>
+<td>Audit failure</td>
 </tr>
 <tr>
 <td>INCOMPATIBLE</td>
 <td>string</td>
- <td>Not compatible with device or OS version</td>
+<td>Not compatible with device or OS version</td>
 </tr>
 <tr>
 <td>PASS</td>
- <td>string</td>
+<td>string</td>
 <td>Device meets requirements</td>
 </tr>
 <tr>
 <td>PENDING</td>
- <td>string</td>
+<td>string</td>
 <td>Waiting on device. Not yet run.</td>
 </tr>
 <tr>
 <td>REMEDIATED</td>
- <td>string</td>
+<td>string</td>
 <td>Parameter remediated</td>
 </tr>
 <tr>
 <td>WARNING</td>
- <td>string</td>
+<td>string</td>
 <td>Muted alert</td>
 </tr>
 </tbody>
@@ -4103,20 +4148,20 @@ print_getDeviceStatus_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -4149,19 +4194,19 @@ print_listDevices_help() {
     echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return model results &quot;containing&quot; the specified model string.${YELLOW} Specify as: model=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}ordering${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>The <code>ordering</code> parameter can be used to define how the device records are ordered in the response. Prepending a dash (-) to the parameter value will reverse the order of the returned results.</p>
- <p><code>?ordering=-serial_number</code> will order the response by serial_number in descending order.</p>
+<p><code>?ordering=-serial_number</code> will order the response by serial_number in descending order.</p>
 <p><strong>Possible values</strong></p>
 <ul>
- <li><code>asset_tag</code></li>
+<li><code>asset_tag</code></li>
 <li><code>blueprint_id</code></li>
 <li><code>device_id</code></li>
- <li><code>device_name</code></li>
+<li><code>device_name</code></li>
 <li><code>last_check_in</code> - agent checkin</li>
 <li><code>model</code></li>
 <li><code>platform</code></li>
- <li><code>os_version</code></li>
+<li><code>os_version</code></li>
 <li><code>serial_number</code></li>
- <li><code>user</code></li>
+<li><code>user</code></li>
 </ul>
 <p>Additionally, multiple values can be combined in a comma separated list to further customize the ordering of the response.</p>
 <p><code>?ordering=serial_number,platform</code></p>${YELLOW} Specify as: ordering=value${OFF}" \
@@ -4208,7 +4253,7 @@ print_getActivationLockBypassCode_help() {
     echo -e ""
     echo -e "<p>This request allows you to retrieve the Activation Lock Bypass code.</p>
 <p>user_based_albc is the user-based Activation Lock bypass code for when Activation Lock is enabled using an personal Apple ID and Find My.</p>
- <p>device_based_albc is the device-based Activation Lock bypass code for when Activation Lock is enabled by the MDM server.</p>
+<p>device_based_albc is the device-based Activation Lock bypass code for when Activation Lock is enabled by the MDM server.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>device_id</code> (path parameter): The unique identifier of the device.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4219,20 +4264,20 @@ print_getActivationLockBypassCode_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -4254,20 +4299,20 @@ print_getFilevaultRecoveryKey_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -4281,7 +4326,7 @@ print_getRecoveryLockPassword_help() {
     echo -e "<p>This request returns the Recovery Lock password for a Mac with an Apple Silicon processor and the legacy EFI firmware password for a Mac with an Intel processor.</p>
 <p>For more details on setting and managing Recovery passwords, see this <a href=&quot;https://support.kandji.io/support/solutions/articles/72000560472-configure-the-recovery-password-library-item&quot;>Kandji support article</a>.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
- <p><code>device_id</code> (path parameter): The unique identifier of the device.</p>" | paste -sd' ' | fold -sw 80
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -4290,20 +4335,20 @@ print_getRecoveryLockPassword_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -4316,7 +4361,7 @@ print_getUnlockPin_help() {
     echo -e ""
     echo -e "<p>This request allows you to retrieve the device unlock pin for a macOS device.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
- <p><code>device_id</code> (path parameter): The unique identifier of the device.</p>" | paste -sd' ' | fold -sw 80
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -4325,20 +4370,244 @@ print_getUnlockPin_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for createInhouseApp operation
+#
+##############################################################################
+print_createInhouseApp_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}createInhouseApp - Create In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "<p>After uploading the .ipa app file to S3, this request allows you to create the In-House App in the Kandji library.</p>
+<p>You must have already generated a <code>file_key</code> via <code>Create In-House App</code> endpoint and uploaded the file to S3 using a request similar to the <code>Upload In-House App to S3</code> example.</p>
+<p>The <code>name</code> key can be an arbitrary value used for setting the name of the Library Item as it appears in Kandji</p>" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}Content-Type${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: Content-Type:value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Created${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for deleteInhouseApp operation
+#
+##############################################################################
+print_deleteInhouseApp_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}deleteInhouseApp - Delete In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "<p>NOTICE: This is permanent so be careful.</p>
+<p>This endpoint sends a request to delete a specific In-House App Library Item from Kandji.</p>
+<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the Library Item.</p>" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=204
+    echo -e "${result_color_table[${code:0:1}]}  204;No Content${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Not Found${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getInhouseApp operation
+#
+##############################################################################
+print_getInhouseApp_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getInhouseApp - Get In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "<p>This endpoint retrieves details about a specific In-House App from the Kandji Library.</p>
+<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the Library Item.</p>" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Language${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Ratelimit-Limit-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}transfer-encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for listInhouseApps operation
+#
+##############################################################################
+print_listInhouseApps_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}listInhouseApps - List In-House Apps${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "This endpoint makes a request to retrieve a list of In-House Apps from the Kandji library." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}page${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Optional page number. Used when results exceed pagination threshold. A hard upper <code>limit</code> is set at 300 app records returned per request.${YELLOW} Specify as: page=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for updateInhouseApp operation
+#
+##############################################################################
+print_updateInhouseApp_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}updateInhouseApp - Update In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "<p>This request allows you to update an existing In-house App in the Kandji library.</p>
+<p>Must have already generated a <code>file_key</code> via <code>Create In-House App</code> endpoint and uploaded the file to S3 using a request similar to the <code>Upload In-House App to S3</code> example.</p>
+<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}Content-Type${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: Content-Type:value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[text/plain]${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uploadInhouseApp operation
+#
+##############################################################################
+print_uploadInhouseApp_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uploadInhouseApp - Upload In-House App${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "<p>This request retrieves the S3 upload details needed for uploading the in-house app .ipa file to Amazon S3.</p>
+<p>Creates a pre-signed <code>post_url</code> to upload a new In-house App to S3.</p>
+<p>The provided <code>filename</code> will be used to calculate a unique <code>file_key</code> in S3.</p>
+<p>A separate request will have to be made to the <code>Upload In-House App to S3</code> endpoint to upload the file to S3 directly using the <code>post_url</code> and <code>post_data</code> from the <code>Upload In-House App</code> response.</p>
+<p>The returned <code>id</code> value can be used to check the upload status in the <code>Upload In-House App Status</code> endpoint after calling the <code>Upload In-House App to S3</code> endpoint.</p>" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}Content-Type${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: Content-Type:value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Created${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Language${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Ratelimit-Limit-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for uploadInhouseAppStatus operation
+#
+##############################################################################
+print_uploadInhouseAppStatus_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uploadInhouseAppStatus - Upload In-House App Status${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "<p>This endpoint retrieves current upload status of an In-House App .ipa file to Amazon S3 from the <code>Upload In-House App to S3</code> endpoint</p>
+<p>The app .ipa file has successfully uploaded and is ready for the <code>Create In-House App</code> endpoint when the <code>status</code> returned is <code>VALIDATED</code></p>
+<p>If the <code>status</code> returned is <code>UPLOADING</code> or VALIDATING, the upload is still being processed. Retry again after 1 second.</p>
+<p>If the <code>status</code> returned is <code>UPLOAD_FAILED</code> or <code>VALIDATE_FAILED</code> then re-attempt the <code>Upload In-House App to S3</code> endpoint.</p>
+<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
+<p><code>pending_upload_id</code> (path parameter): This should be the <code>id</code> from the <code>Upload to In-House App</code> API response</p>" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}pending_upload_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: pending_upload_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -4371,15 +4640,12 @@ print_getLibraryItemActivity_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -4387,10 +4653,7 @@ print_getLibraryItemActivity_help() {
         echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -4399,8 +4662,14 @@ print_getLibraryItemActivity_help() {
         echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}transfer-encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
@@ -4414,7 +4683,7 @@ print_getLibraryItemStatuses_help() {
     echo -e ""
     echo -e "<p>This endpoint retrieves the statuses related to a specific library item.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
- <p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}library_item_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: library_item_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -4429,15 +4698,12 @@ print_getLibraryItemStatuses_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -4445,10 +4711,7 @@ print_getLibraryItemStatuses_help() {
         echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -4457,8 +4720,14 @@ print_getLibraryItemStatuses_help() {
         echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}transfer-encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
@@ -4558,20 +4827,20 @@ print_createDeviceNote_help() {
     code=201
     echo -e "${result_color_table[${code:0:1}]}  201;Created${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -4592,20 +4861,20 @@ print_deleteDeviceNote_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -4625,23 +4894,23 @@ print_getDeviceNotes_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Link${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Total-Count${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Total-Pages${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Link${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -4662,20 +4931,20 @@ print_retrieveDeviceNote_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -4700,20 +4969,20 @@ print_updateDeviceNote_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Strict-Transport-Security${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-XSS-Protection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -4732,7 +5001,7 @@ print_activationLock_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -4745,28 +5014,28 @@ print_activationLock_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Limit-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}transfer-encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
@@ -4786,7 +5055,7 @@ print_applicationFirewall_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -4799,16 +5068,16 @@ print_applicationFirewall_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -4834,7 +5103,7 @@ print_applications_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -4847,28 +5116,28 @@ print_applications_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Limit-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}transfer-encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
@@ -4888,7 +5157,7 @@ print_certificates_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -4901,28 +5170,28 @@ print_certificates_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Limit-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Limit-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Hour${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Ratelimit-Remaining-Second${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Accept-Ranges${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Served-By${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Cache-Hits${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Timer${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}transfer-encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
@@ -4935,12 +5204,12 @@ print_count_help() {
     echo -e "${BOLD}${WHITE}count - Count${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "<p>Get the total record count for the specified Prism category.</p>
- <p>If a category contains spaces substitute the spaces for underscores (&quot;_&quot;) when using the API query.</p>
+<p>If a category contains spaces substitute the spaces for underscores (&quot;_&quot;) when using the API query.</p>
 <p>Example: <code>Device information</code> becomes <code>device_information</code>.</p>" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}category${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - <p>Return the count of records for the specified category. 
- If a category contains spaces substitute the spaces for underscores (&quot;_&quot;) when using the API query.</p>
+If a category contains spaces substitute the spaces for underscores (&quot;_&quot;) when using the API query.</p>
 <p>Examples:
 apps
 device_information
@@ -4952,16 +5221,16 @@ system_extensions</p>${YELLOW} Specify as: category=value${OFF}" \
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -4987,7 +5256,7 @@ print_desktopAndScreensaver_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5000,16 +5269,16 @@ print_desktopAndScreensaver_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -5035,7 +5304,7 @@ print_deviceInformation_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>JSON schema object containing one or more key value pairs.</p>
- <p>Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p>${YELLOW} Specify as: filter=value${OFF}" \
+<p>Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p>${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5050,16 +5319,16 @@ print_deviceInformation_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -5085,7 +5354,7 @@ print_filevault_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5098,16 +5367,16 @@ print_filevault_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -5133,7 +5402,7 @@ print_gatekeeperAndXprotect_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Results are limited to Mac only as Gatekeeper and XProtect are not applicable for other platfroms.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5146,16 +5415,16 @@ print_gatekeeperAndXprotect_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -5184,16 +5453,16 @@ print_getCategoryExport_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -5219,7 +5488,7 @@ print_installedProfiles_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5232,16 +5501,16 @@ print_installedProfiles_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -5267,7 +5536,7 @@ print_kernelExtensions_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - SON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5280,16 +5549,16 @@ print_kernelExtensions_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -5315,7 +5584,7 @@ print_launchAgentsAndDaemons_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5328,16 +5597,16 @@ print_launchAgentsAndDaemons_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -5363,7 +5632,7 @@ print_localUsers_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5376,16 +5645,16 @@ print_localUsers_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -5405,44 +5674,44 @@ print_requestCategoryExport_help() {
     echo -e ""
     echo -e "<p>Request export of a category. The <code>id</code> key is used when checking the export status using the <em>Request category export</em> endpoint.</p>
 <p><strong>Request Body Parameters: application/json</strong></p>
- <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
- <thead>
+<div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
+<thead>
 <tr>
 <th>Key</th>
 <th>Type</th>
 <th>Possible value(s)</th>
 <th>Description</th>
- </tr>
+</tr>
 </thead>
 <tbody>
 <tr>
 <td><code>blueprint_ids</code></td>
 <td><code>array</code></td>
- <td><code>[&quot;string&quot;, &quot;string&quot;, &quot;string&quot;]</code></td>
- <td>List of one or more comma separate blueprint IDs.</td>
+<td><code>[&quot;string&quot;, &quot;string&quot;, &quot;string&quot;]</code></td>
+<td>List of one or more comma separate blueprint IDs.</td>
 </tr>
 <tr>
- <td><code>category</code></td>
+<td><code>category</code></td>
 <td><code>string</code></td>
 <td><code>apps</code> ,  <br /><code>activation_lock</code> ,  <br /><code>desktop_and_screensaver</code> ,  <br /><code>device_information</code> ,  <br /><code>gatekeeper_and_xprotect</code> ,  <br /><code>installed_profiles</code> ,  <br /><code>kernel_extensions</code> ,  <br /><code>local_users</code> ,  <br /><code>launch_agents_and_daemons</code> ,  <br /><code>system_extensions</code> ,  <br /><code>startup_settings</code> ,  <br /><code>transparency_database</code></td>
 <td>Only one category per export reqest.</td>
 </tr>
 <tr>
 <td><code>device_families</code></td>
- <td><code>array</code></td>
+<td><code>array</code></td>
 <td><code>[&quot;Mac&quot;, &quot;iPhone&quot;, &quot;iPad&quot;, &quot;tvOS&quot;]</code></td>
 <td>List of one or more comma separted string values for device families.</td>
 </tr>
 <tr>
 <td><code>filter</code></td>
- <td><code>object</code></td>
+<td><code>object</code></td>
 <td><code>{&quot;apple_silicon&quot;: {&quot;eq&quot;: true}, &quot;device__name&quot;: {&quot;like&quot;: [&quot;this&quot;, &quot;or_this&quot;]}}</code></td>
- <td>JSON schema object containing one or more key value pairs.  <br />  <br /><strong>Note</strong>: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</td>
- </tr>
+<td>JSON schema object containing one or more key value pairs.  <br />  <br /><strong>Note</strong>: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</td>
+</tr>
 <tr>
 <td><code>sort_by</code></td>
 <td><code>string</code></td>
- <td></td>
+<td></td>
 <td>Sort results by the name of a given response body key in either ascending (default behavior) or descending('-') order.</td>
 </tr>
 </tbody>
@@ -5457,16 +5726,16 @@ print_requestCategoryExport_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -5477,11 +5746,11 @@ print_requestCategoryExport_help() {
     code=400
     echo -e "${result_color_table[${code:0:1}]}  400;Bad Request${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -5511,7 +5780,7 @@ print_startupSettings_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5524,16 +5793,16 @@ print_startupSettings_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -5559,7 +5828,7 @@ print_systemExtensions_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5572,16 +5841,16 @@ print_systemExtensions_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -5607,7 +5876,7 @@ print_transparencyDatabase_help() {
     echo -e "  * ${GREEN}device_families${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter results by one or more device families separate by commas.${YELLOW} Specify as: device_families=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order.${YELLOW} Specify as: sort_by=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5620,16 +5889,16 @@ print_transparencyDatabase_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Connection${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Access-Control-Allow-Origin${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Limit${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Remaining${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Ratelimit-Reset${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Transfer-Encoding${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Via${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Proxy-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Kong-Upstream-Latency${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
@@ -5655,18 +5924,18 @@ print_listSelfServiceCategories_help() {
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
-        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Date${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Server${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
-        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Type${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Allow${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-Frame-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Length${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-Content-Type-Options${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Referrer-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Cross-Origin-Opener-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Feature-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Vary${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Content-Security-Policy${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -5793,14 +6062,14 @@ print_getThreatDetails_help() {
     echo -e "  * ${GREEN}status${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Return all records matching a specified status. The following status options are available: <code>quarantined</code>, <code>not_quarantined</code>, or <code>released</code>. Leave this parameter empty to return all status types.${YELLOW} Specify as: status=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - <p>Results can be sorted with the following options: </p>
- <ul>
+<ul>
 <li>threat_name</li>
 <li>classification</li>
 <li>device_name</li>
- <li>process_name</li>
+<li>process_name</li>
 <li>process_owner</li>
 <li>detection_date</li>
- <li>status</li>
+<li>status</li>
 </ul>
 <p>Prepending a dash (-) to the parameter value will reverse the order of the returned results.</p>
 <p><code>?sort_by=-device_name</code> will order the response by device_name in descending order.</p>${YELLOW} Specify as: sort_by=value${OFF}" \
@@ -8810,6 +9079,384 @@ call_getUnlockPin() {
 
 ##############################################################################
 #
+# Call createInhouseApp operation
+#
+##############################################################################
+call_createInhouseApp() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/library/ipa-apps" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call deleteInhouseApp operation
+#
+##############################################################################
+call_deleteInhouseApp() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(library_item_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/library/ipa-apps/{library_item_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getInhouseApp operation
+#
+##############################################################################
+call_getInhouseApp() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(library_item_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/library/ipa-apps/{library_item_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call listInhouseApps operation
+#
+##############################################################################
+call_listInhouseApps() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(page  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/library/ipa-apps" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call updateInhouseApp operation
+#
+##############################################################################
+call_updateInhouseApp() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(library_item_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/library/ipa-apps/{library_item_id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PATCH"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="text/plain"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- text/plain"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call uploadInhouseApp operation
+#
+##############################################################################
+call_uploadInhouseApp() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/library/ipa-apps/upload" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call uploadInhouseAppStatus operation
+#
+##############################################################################
+call_uploadInhouseAppStatus() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(pending_upload_id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v1/library/ipa-apps/upload/{pending_upload_id}/status" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call getLibraryItemActivity operation
 #
 ##############################################################################
@@ -10762,6 +11409,27 @@ case $key in
     getUnlockPin)
     operation="getUnlockPin"
     ;;
+    createInhouseApp)
+    operation="createInhouseApp"
+    ;;
+    deleteInhouseApp)
+    operation="deleteInhouseApp"
+    ;;
+    getInhouseApp)
+    operation="getInhouseApp"
+    ;;
+    listInhouseApps)
+    operation="listInhouseApps"
+    ;;
+    updateInhouseApp)
+    operation="updateInhouseApp"
+    ;;
+    uploadInhouseApp)
+    operation="uploadInhouseApp"
+    ;;
+    uploadInhouseAppStatus)
+    operation="uploadInhouseAppStatus"
+    ;;
     getLibraryItemActivity)
     operation="getLibraryItemActivity"
     ;;
@@ -11157,6 +11825,27 @@ case $operation in
     ;;
     getUnlockPin)
     call_getUnlockPin
+    ;;
+    createInhouseApp)
+    call_createInhouseApp
+    ;;
+    deleteInhouseApp)
+    call_deleteInhouseApp
+    ;;
+    getInhouseApp)
+    call_getInhouseApp
+    ;;
+    listInhouseApps)
+    call_listInhouseApps
+    ;;
+    updateInhouseApp)
+    call_updateInhouseApp
+    ;;
+    uploadInhouseApp)
+    call_uploadInhouseApp
+    ;;
+    uploadInhouseAppStatus)
+    call_uploadInhouseAppStatus
     ;;
     getLibraryItemActivity)
     call_getLibraryItemActivity

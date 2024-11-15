@@ -134,6 +134,13 @@ _()
     operations["getFilevaultRecoveryKey"]=1
     operations["getRecoveryLockPassword"]=1
     operations["getUnlockPin"]=1
+    operations["createInhouseApp"]=1
+    operations["deleteInhouseApp"]=1
+    operations["getInhouseApp"]=1
+    operations["listInhouseApps"]=1
+    operations["updateInhouseApp"]=1
+    operations["uploadInhouseApp"]=1
+    operations["uploadInhouseAppStatus"]=1
     operations["getLibraryItemActivity"]=1
     operations["getLibraryItemStatuses"]=1
     operations["disableLostMode"]=1
@@ -241,6 +248,13 @@ _()
     operation_parameters["getFilevaultRecoveryKey"]="device_id= "
     operation_parameters["getRecoveryLockPassword"]="device_id= "
     operation_parameters["getUnlockPin"]="device_id= "
+    operation_parameters["createInhouseApp"]="Content-Type: "
+    operation_parameters["deleteInhouseApp"]="library_item_id= "
+    operation_parameters["getInhouseApp"]="library_item_id= "
+    operation_parameters["listInhouseApps"]="page= "
+    operation_parameters["updateInhouseApp"]="library_item_id= Content-Type: "
+    operation_parameters["uploadInhouseApp"]="Content-Type: "
+    operation_parameters["uploadInhouseAppStatus"]="pending_upload_id= "
     operation_parameters["getLibraryItemActivity"]="library_item_id= activity_type= user_id= user_email= limit= offset= "
     operation_parameters["getLibraryItemStatuses"]="library_item_id= computer_id= limit= offset= "
     operation_parameters["disableLostMode"]="device_id= "

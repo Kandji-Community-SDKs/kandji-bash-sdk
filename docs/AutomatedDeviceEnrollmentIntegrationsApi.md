@@ -37,9 +37,9 @@ Create ADE integration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **blueprintId** | **string** |  | [default to null]
+ **phone** | **string** |  | [default to null]
  **email** | **string** |  | [default to null]
  **file** | **binary** | This is the MDM server token file(.p7m) download from ABM. Once downloaded from ABM, the file can be uploaded via API. | [default to null]
- **phone** | **string** |  | [default to null]
 
 ### Return type
 
@@ -279,7 +279,7 @@ List devices associated to ADE token
 
 <p>This request returns a list of devices associated with a specified <code>ade_token_id</code> as well as their enrollment status.</p>
 <p>When the <code>mdm_device</code> key value is <code>null</code>, this can be taken as an indication that the device is awaiting enrollment into Kandji.</p>
- <p>When data is present within the mdm_device dictionary, you can reference the <code>device_id</code> as the ID of the enrolled device record.</p>
+<p>When data is present within the mdm_device dictionary, you can reference the <code>device_id</code> as the ID of the enrolled device record.</p>
 
 ### Example
 
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 Renew ADE integration
 
 <p>This request will renew an existing ADE integration.</p>
- <p>The default <code>blueprint_id</code>, <code>phone</code> number, <code>email</code> address, and MDM server token <code>file</code> from the associated MDM server in ABM are required and must be sent in the request.</p>
+<p>The default <code>blueprint_id</code>, <code>phone</code> number, <code>email</code> address, and MDM server token <code>file</code> from the associated MDM server in ABM are required and must be sent in the request.</p>
 
 ### Example
 
@@ -331,9 +331,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **adeTokenId** | **string** |  | [default to null]
  **blueprintId** | **string** |  | [default to null]
+ **phone** | **string** |  | [default to null]
  **email** | **string** |  | [default to null]
  **file** | **binary** | This is the MDM server token file(.p7m) download from ABM. Once downloaded from ABM, the file can be uploaded via API. | [default to null]
- **phone** | **string** |  | [default to null]
 
 ### Return type
 

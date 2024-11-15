@@ -354,7 +354,13 @@ case $state in
             "listDevices[List Devices]"             "getActivationLockBypassCode[Get Activation Lock Bypass Code]" \
             "getFilevaultRecoveryKey[Get FileVault Recovery Key]" \
             "getRecoveryLockPassword[Get Recovery Lock Password]" \
-            "getUnlockPin[Get Unlock Pin]"             "getLibraryItemActivity[Get Library Item Activity]" \
+            "getUnlockPin[Get Unlock Pin]"             "createInhouseApp[Create In-House App]" \
+            "deleteInhouseApp[Delete In-House App]" \
+            "getInhouseApp[Get In-House App]" \
+            "listInhouseApps[List In-House Apps]" \
+            "updateInhouseApp[Update In-House App]" \
+            "uploadInhouseApp[Upload In-House App]" \
+            "uploadInhouseAppStatus[Upload In-House App Status]"             "getLibraryItemActivity[Get Library Item Activity]" \
             "getLibraryItemStatuses[Get Library Item Statuses]"             "disableLostMode[Disable Lost Mode]" \
             "enableLostMode[Enable Lost Mode]" \
             "playLostModeSound[Play Lost Mode Sound]" \
@@ -834,19 +840,19 @@ case $state in
 "mac_address=:[QUERY] Search for a specific device by MAC address"
 "model=:[QUERY] Return model results &amp;quot;containing&amp;quot; the specified model string."
 "ordering=:[QUERY] &lt;p&gt;The &lt;code&gt;ordering&lt;/code&gt; parameter can be used to define how the device records are ordered in the response. Prepending a dash (-) to the parameter value will reverse the order of the returned results.&lt;/p&gt;
- &lt;p&gt;&lt;code&gt;?ordering&#x3D;-serial_number&lt;/code&gt; will order the response by serial_number in descending order.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;?ordering&#x3D;-serial_number&lt;/code&gt; will order the response by serial_number in descending order.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Possible values&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
- &lt;li&gt;&lt;code&gt;asset_tag&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;asset_tag&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;blueprint_id&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;device_id&lt;/code&gt;&lt;/li&gt;
- &lt;li&gt;&lt;code&gt;device_name&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;device_name&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;last_check_in&lt;/code&gt; - agent checkin&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;model&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;platform&lt;/code&gt;&lt;/li&gt;
- &lt;li&gt;&lt;code&gt;os_version&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;os_version&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;serial_number&lt;/code&gt;&lt;/li&gt;
- &lt;li&gt;&lt;code&gt;user&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;user&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Additionally, multiple values can be combined in a comma separated list to further customize the ordering of the response.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;?ordering&#x3D;serial_number,platform&lt;/code&gt;&lt;/p&gt;"
@@ -891,6 +897,56 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "device_id=:[PATH] "
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      createInhouseApp)
+        local -a _op_arguments
+        _op_arguments=(
+                              "Content-Type\::[HEADER] "
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      deleteInhouseApp)
+        local -a _op_arguments
+        _op_arguments=(
+          "library_item_id=:[PATH] "
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getInhouseApp)
+        local -a _op_arguments
+        _op_arguments=(
+          "library_item_id=:[PATH] "
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      listInhouseApps)
+        local -a _op_arguments
+        _op_arguments=(
+                    "page=:[QUERY] Optional page number. Used when results exceed pagination threshold. A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 app records returned per request."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      updateInhouseApp)
+        local -a _op_arguments
+        _op_arguments=(
+          "library_item_id=:[PATH] "
+                    "Content-Type\::[HEADER] "
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uploadInhouseApp)
+        local -a _op_arguments
+        _op_arguments=(
+                              "Content-Type\::[HEADER] "
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uploadInhouseAppStatus)
+        local -a _op_arguments
+        _op_arguments=(
+          "pending_upload_id=:[PATH] "
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -990,7 +1046,7 @@ case $state in
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Filter results by one or more device families separate by commas."
 "filter=:[QUERY] JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return."
@@ -1003,7 +1059,7 @@ case $state in
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Filter results by one or more device families separate by commas."
 "filter=:[QUERY] JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return."
@@ -1016,7 +1072,7 @@ case $state in
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Filter results by one or more device families separate by commas."
 "filter=:[QUERY] JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return."
@@ -1029,7 +1085,7 @@ case $state in
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Filter results by one or more device families separate by commas."
 "filter=:[QUERY] JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return."
@@ -1040,7 +1096,7 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
                     "category=:[QUERY] &lt;p&gt;Return the count of records for the specified category. 
- If a category contains spaces substitute the spaces for underscores (&amp;quot;_&amp;quot;) when using the API query.&lt;/p&gt;
+If a category contains spaces substitute the spaces for underscores (&amp;quot;_&amp;quot;) when using the API query.&lt;/p&gt;
 &lt;p&gt;Examples:
 apps
 device_information
@@ -1055,7 +1111,7 @@ system_extensions&lt;/p&gt;"
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Filter results by one or more device families separate by commas."
 "filter=:[QUERY] JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return."
@@ -1068,7 +1124,7 @@ system_extensions&lt;/p&gt;"
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Filter results by one or more device families separate by commas."
 "filter=:[QUERY] &lt;p&gt;JSON schema object containing one or more key value pairs.&lt;/p&gt;
- &lt;p&gt;Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
+&lt;p&gt;Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.&lt;/p&gt;"
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return"
@@ -1081,7 +1137,7 @@ system_extensions&lt;/p&gt;"
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Filter results by one or more device families separate by commas."
 "filter=:[QUERY] JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return"
@@ -1094,7 +1150,7 @@ system_extensions&lt;/p&gt;"
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Results are limited to Mac only as Gatekeeper and XProtect are not applicable for other platfroms."
 "filter=:[QUERY] JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return"
@@ -1114,7 +1170,7 @@ system_extensions&lt;/p&gt;"
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Filter results by one or more device families separate by commas."
 "filter=:[QUERY] JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return."
@@ -1127,7 +1183,7 @@ system_extensions&lt;/p&gt;"
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Filter results by one or more device families separate by commas."
 "filter=:[QUERY] SON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return."
@@ -1140,7 +1196,7 @@ system_extensions&lt;/p&gt;"
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Filter results by one or more device families separate by commas."
 "filter=:[QUERY] JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return."
@@ -1153,7 +1209,7 @@ system_extensions&lt;/p&gt;"
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Filter results by one or more device families separate by commas."
 "filter=:[QUERY] JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return."
@@ -1172,7 +1228,7 @@ system_extensions&lt;/p&gt;"
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Filter results by one or more device families separate by commas."
 "filter=:[QUERY] JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return"
@@ -1185,7 +1241,7 @@ system_extensions&lt;/p&gt;"
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Filter results by one or more device families separate by commas."
 "filter=:[QUERY] JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return."
@@ -1198,7 +1254,7 @@ system_extensions&lt;/p&gt;"
                     "blueprint_ids=:[QUERY] Filter results by one or more blueprint IDs separated by commas."
 "device_families=:[QUERY] Filter results by one or more device families separate by commas."
 "filter=:[QUERY] JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc."
 "sort_by=:[QUERY] Sort results by the name of a given response body key in either ascending (default behavior) or descending(&lt;code&gt;-&lt;/code&gt;) order."
 "limit=:[QUERY] A hard upper &lt;code&gt;limit&lt;/code&gt; is set at 300 device records returned per request. If more device records are expected, pagination should be used using the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; parameters. Additionally, parameter queries can be added to a request to limit the results."
 "offset=:[QUERY] Specify the starting record to return."
@@ -1252,14 +1308,14 @@ system_extensions&lt;/p&gt;"
 "device_id=:[QUERY] "
 "status=:[QUERY] Return all records matching a specified status. The following status options are available: &lt;code&gt;quarantined&lt;/code&gt;, &lt;code&gt;not_quarantined&lt;/code&gt;, or &lt;code&gt;released&lt;/code&gt;. Leave this parameter empty to return all status types."
 "sort_by=:[QUERY] &lt;p&gt;Results can be sorted with the following options: &lt;/p&gt;
- &lt;ul&gt;
+&lt;ul&gt;
 &lt;li&gt;threat_name&lt;/li&gt;
 &lt;li&gt;classification&lt;/li&gt;
 &lt;li&gt;device_name&lt;/li&gt;
- &lt;li&gt;process_name&lt;/li&gt;
+&lt;li&gt;process_name&lt;/li&gt;
 &lt;li&gt;process_owner&lt;/li&gt;
 &lt;li&gt;detection_date&lt;/li&gt;
- &lt;li&gt;status&lt;/li&gt;
+&lt;li&gt;status&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Prepending a dash (-) to the parameter value will reverse the order of the returned results.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;?sort_by&#x3D;-device_name&lt;/code&gt; will order the response by device_name in descending order.&lt;/p&gt;"

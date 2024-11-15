@@ -169,9 +169,9 @@ Get Device Library Items
 <thead>
 <tr>
 <th><strong>Value</strong></th>
- <th><strong>Type</strong></th>
+<th><strong>Type</strong></th>
 <th><strong>Additional Info</strong></th>
- </tr>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -182,30 +182,30 @@ Get Device Library Items
 <tr>
 <td>CACHED</td>
 <td>string</td>
- <td>Library item downloaded for install but not yet installed</td>
+<td>Library item downloaded for install but not yet installed</td>
 </tr>
- <tr>
+<tr>
 <td>CHANGE_PENDING</td>
 <td>string</td>
 <td>Recovery Password library item has changes that have not yet been applied</td>
 </tr>
 <tr>
 <td>DOWNLOADING</td>
- <td>string</td>
+<td>string</td>
 <td>Library item downloading</td>
 </tr>
 <tr>
 <td>ERROR</td>
- <td>string</td>
+<td>string</td>
 <td>Audit failure</td>
 </tr>
 <tr>
 <td>EXCLUDED</td>
- <td>string</td>
+<td>string</td>
 <td>Not in scope for assignment rule</td>
 </tr>
 <tr>
- <td>INCOMPATIBLE</td>
+<td>INCOMPATIBLE</td>
 <td>string</td>
 <td>Not compatible with device or OS version</td>
 </tr>
@@ -222,7 +222,7 @@ Get Device Library Items
 <tr>
 <td>PENDING</td>
 <td>string</td>
- <td>Waiting on device, not yet installed (All library items except for config profiles)</td>
+<td>Waiting on device, not yet installed (All library items except for config profiles)</td>
 </tr>
 <tr>
 <td>failed</td>
@@ -232,9 +232,9 @@ Get Device Library Items
 <tr>
 <td>pending</td>
 <td>string</td>
- <td>Waiting on device, Configuration profile not yet installed</td>
+<td>Waiting on device, Configuration profile not yet installed</td>
 </tr>
- <tr>
+<tr>
 <td>success</td>
 <td>string</td>
 <td>Configuration profile installed</td>
@@ -314,15 +314,15 @@ Get Device Parameters
 
 <p>This request returns the parameters and their statuses for a specified Device ID</p>
 <p>This endpoint is only applicable to macOS clients.</p>
- <p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=&quot;https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations&quot;>https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>
- <p><strong>Possible parameter status values</strong></p>
+<p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=&quot;https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations&quot;>https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>
+<p><strong>Possible parameter status values</strong></p>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
 <thead>
 <tr>
 <th><strong>Value</strong></th>
- <th><strong>Type</strong></th>
+<th><strong>Type</strong></th>
 <th><strong>Additional Info</strong></th>
- </tr>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -338,21 +338,21 @@ Get Device Parameters
 <tr>
 <td>PASS</td>
 <td>string</td>
- <td>Device meets requirements</td>
+<td>Device meets requirements</td>
 </tr>
 <tr>
 <td>PENDING</td>
 <td>string</td>
- <td>Waiting on device. Not yet run.</td>
+<td>Waiting on device. Not yet run.</td>
 </tr>
 <tr>
 <td>REMEDIATED</td>
- <td>string</td>
+<td>string</td>
 <td>Parameter remediated</td>
 </tr>
 <tr>
 <td>WARNING</td>
- <td>string</td>
+<td>string</td>
 <td>Muted alert</td>
 </tr>
 </tbody>
@@ -394,28 +394,28 @@ Get Device Status
 
 <p>This request returns the full status (parameters and library items) for a specified Device ID.</p>
 <p>The parameters will be returned as a list of IDs. These IDs can be correlated with the parameter names available here: <a href=&quot;https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations&quot;>https://github.com/kandji-inc/support/wiki/Devices-API---Parameter-Correlations</a></p>
- <h4 id=&quot;possible-status-values&quot;>Possible status values</h4>
+<h4 id=&quot;possible-status-values&quot;>Possible status values</h4>
 <p><strong>Library items</strong></p>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
- <thead>
+<thead>
 <tr>
 <th><strong>Value</strong></th>
 <th><strong>Type</strong></th>
- <th><strong>Additional Info</strong></th>
+<th><strong>Additional Info</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
- <td>AVAILABLE</td>
+<td>AVAILABLE</td>
 <td>string</td>
 <td>Library item available in Self Service</td>
- </tr>
+</tr>
 <tr>
 <td>ERROR</td>
 <td>string</td>
 <td>Audit failure</td>
 </tr>
- <tr>
+<tr>
 <td>EXCLUDED</td>
 <td>string</td>
 <td>Not in scope for assignment rule</td>
@@ -428,12 +428,12 @@ Get Device Status
 <tr>
 <td>PASS</td>
 <td>string</td>
- <td>Device meets requirements</td>
+<td>Device meets requirements</td>
 </tr>
 <tr>
 <td>PENDING</td>
 <td>string</td>
- <td>Waiting on device, not yet installed (All library items except for config profiles)</td>
+<td>Waiting on device, not yet installed (All library items except for config profiles)</td>
 </tr>
 <tr>
 <td>failed</td>
@@ -443,19 +443,19 @@ Get Device Status
 <tr>
 <td>pending</td>
 <td>string</td>
- <td>Waiting on device, Configuration profile not yet installed</td>
+<td>Waiting on device, Configuration profile not yet installed</td>
 </tr>
- <tr>
+<tr>
 <td>success</td>
 <td>string</td>
 <td>Configuration profile installed</td>
- </tr>
+</tr>
 </tbody>
 </table>
 </div><p><strong>Parameters</strong></p>
 <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
 <thead>
- <tr>
+<tr>
 <th><strong>Value</strong></th>
 <th><strong>Type</strong></th>
 <th><strong>Additional Info</strong></th>
@@ -465,31 +465,31 @@ Get Device Status
 <tr>
 <td>ERROR</td>
 <td>string</td>
- <td>Audit failure</td>
+<td>Audit failure</td>
 </tr>
 <tr>
 <td>INCOMPATIBLE</td>
 <td>string</td>
- <td>Not compatible with device or OS version</td>
+<td>Not compatible with device or OS version</td>
 </tr>
 <tr>
 <td>PASS</td>
- <td>string</td>
+<td>string</td>
 <td>Device meets requirements</td>
 </tr>
 <tr>
 <td>PENDING</td>
- <td>string</td>
+<td>string</td>
 <td>Waiting on device. Not yet run.</td>
 </tr>
 <tr>
 <td>REMEDIATED</td>
- <td>string</td>
+<td>string</td>
 <td>Parameter remediated</td>
 </tr>
 <tr>
 <td>WARNING</td>
- <td>string</td>
+<td>string</td>
 <td>Muted alert</td>
 </tr>
 </tbody>
@@ -553,19 +553,19 @@ Name | Type | Description  | Notes
  **macAddress** | **string** | Search for a specific device by MAC address | [optional] [default to null]
  **model** | **string** | Return model results &quot;containing&quot; the specified model string. | [optional] [default to null]
  **ordering** | **string** | <p>The <code>ordering</code> parameter can be used to define how the device records are ordered in the response. Prepending a dash (-) to the parameter value will reverse the order of the returned results.</p>
- <p><code>?ordering=-serial_number</code> will order the response by serial_number in descending order.</p>
+<p><code>?ordering=-serial_number</code> will order the response by serial_number in descending order.</p>
 <p><strong>Possible values</strong></p>
 <ul>
- <li><code>asset_tag</code></li>
+<li><code>asset_tag</code></li>
 <li><code>blueprint_id</code></li>
 <li><code>device_id</code></li>
- <li><code>device_name</code></li>
+<li><code>device_name</code></li>
 <li><code>last_check_in</code> - agent checkin</li>
 <li><code>model</code></li>
 <li><code>platform</code></li>
- <li><code>os_version</code></li>
+<li><code>os_version</code></li>
 <li><code>serial_number</code></li>
- <li><code>user</code></li>
+<li><code>user</code></li>
 </ul>
 <p>Additionally, multiple values can be combined in a comma separated list to further customize the ordering of the response.</p>
 <p><code>?ordering=serial_number,platform</code></p> | [optional] [default to null]

@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 Count
 
 <p>Get the total record count for the specified Prism category.</p>
- <p>If a category contains spaces substitute the spaces for underscores (&quot;_&quot;) when using the API query.</p>
+<p>If a category contains spaces substitute the spaces for underscores (&quot;_&quot;) when using the API query.</p>
 <p>Example: <code>Device information</code> becomes <code>device_information</code>.</p>
 
 ### Example
@@ -209,7 +209,7 @@ Count
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **category** | **string** | <p>Return the count of records for the specified category. 
- If a category contains spaces substitute the spaces for underscores (&quot;_&quot;) when using the API query.</p>
+If a category contains spaces substitute the spaces for underscores (&quot;_&quot;) when using the API query.</p>
 <p>Examples:
 apps
 device_information
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | <p>JSON schema object containing one or more key value pairs.</p>
- <p>Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
+<p>Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</p> | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return | [optional] [default to null]
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return | [optional] [default to null]
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Results are limited to Mac only as Gatekeeper and XProtect are not applicable for other platfroms. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return | [optional] [default to null]
@@ -454,7 +454,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | SON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -536,7 +536,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -577,7 +577,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -604,44 +604,44 @@ Request category export
 
 <p>Request export of a category. The <code>id</code> key is used when checking the export status using the <em>Request category export</em> endpoint.</p>
 <p><strong>Request Body Parameters: application/json</strong></p>
- <div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
- <thead>
+<div class=&quot;click-to-expand-wrapper is-table-wrapper&quot;><table>
+<thead>
 <tr>
 <th>Key</th>
 <th>Type</th>
 <th>Possible value(s)</th>
 <th>Description</th>
- </tr>
+</tr>
 </thead>
 <tbody>
 <tr>
 <td><code>blueprint_ids</code></td>
 <td><code>array</code></td>
- <td><code>[&quot;string&quot;, &quot;string&quot;, &quot;string&quot;]</code></td>
- <td>List of one or more comma separate blueprint IDs.</td>
+<td><code>[&quot;string&quot;, &quot;string&quot;, &quot;string&quot;]</code></td>
+<td>List of one or more comma separate blueprint IDs.</td>
 </tr>
 <tr>
- <td><code>category</code></td>
+<td><code>category</code></td>
 <td><code>string</code></td>
 <td><code>apps</code> ,  <br /><code>activation_lock</code> ,  <br /><code>desktop_and_screensaver</code> ,  <br /><code>device_information</code> ,  <br /><code>gatekeeper_and_xprotect</code> ,  <br /><code>installed_profiles</code> ,  <br /><code>kernel_extensions</code> ,  <br /><code>local_users</code> ,  <br /><code>launch_agents_and_daemons</code> ,  <br /><code>system_extensions</code> ,  <br /><code>startup_settings</code> ,  <br /><code>transparency_database</code></td>
 <td>Only one category per export reqest.</td>
 </tr>
 <tr>
 <td><code>device_families</code></td>
- <td><code>array</code></td>
+<td><code>array</code></td>
 <td><code>[&quot;Mac&quot;, &quot;iPhone&quot;, &quot;iPad&quot;, &quot;tvOS&quot;]</code></td>
 <td>List of one or more comma separted string values for device families.</td>
 </tr>
 <tr>
 <td><code>filter</code></td>
- <td><code>object</code></td>
+<td><code>object</code></td>
 <td><code>{&quot;apple_silicon&quot;: {&quot;eq&quot;: true}, &quot;device__name&quot;: {&quot;like&quot;: [&quot;this&quot;, &quot;or_this&quot;]}}</code></td>
- <td>JSON schema object containing one or more key value pairs.  <br />  <br /><strong>Note</strong>: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</td>
- </tr>
+<td>JSON schema object containing one or more key value pairs.  <br />  <br /><strong>Note</strong>: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc.</td>
+</tr>
 <tr>
 <td><code>sort_by</code></td>
 <td><code>string</code></td>
- <td></td>
+<td></td>
 <td>Sort results by the name of a given response body key in either ascending (default behavior) or descending('-') order.</td>
 </tr>
 </tbody>
@@ -697,7 +697,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return | [optional] [default to null]
@@ -738,7 +738,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]
@@ -779,7 +779,7 @@ Name | Type | Description  | Notes
  **blueprintIds** | **string** | Filter results by one or more blueprint IDs separated by commas. | [optional] [default to null]
  **deviceFamilies** | **string** | Filter results by one or more device families separate by commas. | [optional] [default to null]
  **filter** | **string** | JSON schema object containing one or more key value pairs.
- Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
+Note: For detailed information on fiters, see the Filters section at the begining of the Visibility API endpoints in this doc. | [optional] [default to null]
  **sortBy** | **string** | Sort results by the name of a given response body key in either ascending (default behavior) or descending(<code>-</code>) order. | [optional] [default to null]
  **limit** | **string** | A hard upper <code>limit</code> is set at 300 device records returned per request. If more device records are expected, pagination should be used using the <code>limit</code> and <code>offset</code> parameters. Additionally, parameter queries can be added to a request to limit the results. | [optional] [default to null]
  **offset** | **string** | Specify the starting record to return. | [optional] [default to null]

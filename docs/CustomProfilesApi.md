@@ -29,9 +29,9 @@ This request allows you to create a custom profile in the Kandji library.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **active** | **string** | (Optional, default=true) Whether this library item is active | [default to null]
- **file** | **binary** | (Required) The path to the profile's .mobileconfig file | [default to null]
  **name** | **string** | (Required) The profile name | [default to null]
+ **file** | **binary** | (Required) The path to the profile's .mobileconfig file | [default to null]
+ **active** | **string** | (Optional, default=true) Whether this library item is active | [default to null]
 
 ### Return type
 
@@ -55,7 +55,7 @@ Delete Custom Profile
 
 <p>NOTICE: This is permanent so be careful.</p>
 <p>This endpoint sends a request to delete a specific custom profile from the Kandji library.</p>
- <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
+<h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
@@ -165,7 +165,7 @@ Update Custom Profile
 
 <p>This request allows you to update a custom profile in the Kandji library.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
- <p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
+<p><code>library_item_id</code> (path parameter): The unique identifier of the library item.</p>
 
 ### Example
 

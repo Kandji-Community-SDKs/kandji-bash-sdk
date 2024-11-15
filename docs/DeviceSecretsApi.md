@@ -17,7 +17,7 @@ Get Activation Lock Bypass Code
 
 <p>This request allows you to retrieve the Activation Lock Bypass code.</p>
 <p>user_based_albc is the user-based Activation Lock bypass code for when Activation Lock is enabled using an personal Apple ID and Find My.</p>
- <p>device_based_albc is the device-based Activation Lock bypass code for when Activation Lock is enabled by the MDM server.</p>
+<p>device_based_albc is the device-based Activation Lock bypass code for when Activation Lock is enabled by the MDM server.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
 <p><code>device_id</code> (path parameter): The unique identifier of the device.</p>
 
@@ -94,7 +94,7 @@ Get Recovery Lock Password
 <p>This request returns the Recovery Lock password for a Mac with an Apple Silicon processor and the legacy EFI firmware password for a Mac with an Intel processor.</p>
 <p>For more details on setting and managing Recovery passwords, see this <a href=&quot;https://support.kandji.io/support/solutions/articles/72000560472-configure-the-recovery-password-library-item&quot;>Kandji support article</a>.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
- <p><code>device_id</code> (path parameter): The unique identifier of the device.</p>
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>
 
 ### Example
 
@@ -131,7 +131,7 @@ Get Unlock Pin
 
 <p>This request allows you to retrieve the device unlock pin for a macOS device.</p>
 <h3 id=&quot;request-parameters&quot;>Request Parameters</h3>
- <p><code>device_id</code> (path parameter): The unique identifier of the device.</p>
+<p><code>device_id</code> (path parameter): The unique identifier of the device.</p>
 
 ### Example
 
