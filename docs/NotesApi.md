@@ -21,7 +21,7 @@ This request creates a note for the specified device ID.
 ### Example
 
 ```bash
- createDeviceNote device_id=value
+kandji_sdk createDeviceNote device_id=value
 ```
 
 ### Parameters
@@ -57,7 +57,7 @@ This request deletes a specified note (Note ID) for the specified Device ID.
 ### Example
 
 ```bash
- deleteDeviceNote device_id=value note_id=value
+kandji_sdk deleteDeviceNote device_id=value note_id=value
 ```
 
 ### Parameters
@@ -93,7 +93,7 @@ This request gets all notes for the specified Device ID.
 ### Example
 
 ```bash
- getDeviceNotes device_id=value
+kandji_sdk getDeviceNotes device_id=value
 ```
 
 ### Parameters
@@ -128,7 +128,7 @@ This request retrieves a specified note (Note ID) for the specified Device ID.
 ### Example
 
 ```bash
- retrieveDeviceNote device_id=value note_id=value
+kandji_sdk retrieveDeviceNote device_id=value note_id=value
 ```
 
 ### Parameters
@@ -164,7 +164,7 @@ This request patches a specified note (Note ID) for the specified Device ID.
 ### Example
 
 ```bash
- updateDeviceNote device_id=value note_id=value Authorization:value Content-Type:value
+kandji_sdk updateDeviceNote device_id=value note_id=value Authorization:value Content-Type:value
 ```
 
 ### Parameters

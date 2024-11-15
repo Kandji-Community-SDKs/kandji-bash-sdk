@@ -28,7 +28,7 @@ Create ADE integration
 ### Example
 
 ```bash
- createAdeIntegration
+kandji_sdk createAdeIntegration
 ```
 
 ### Parameters
@@ -69,7 +69,7 @@ Delete ADE integration
 ### Example
 
 ```bash
- deleteAdeIntegration ade_token_id=value
+kandji_sdk deleteAdeIntegration ade_token_id=value
 ```
 
 ### Parameters
@@ -105,7 +105,7 @@ Download ADE public key
 ### Example
 
 ```bash
- downloadAdePublicKey
+kandji_sdk downloadAdePublicKey
 ```
 
 ### Parameters
@@ -137,7 +137,7 @@ Get information about a specific Automated Device Enrollment device.
 ### Example
 
 ```bash
- getAdeDevice device_id=value
+kandji_sdk getAdeDevice device_id=value
 ```
 
 ### Parameters
@@ -172,7 +172,7 @@ This request returns a specific ADE integration based on the <code>ade_token_id<
 ### Example
 
 ```bash
- getAdeIntegration ade_token_id=value
+kandji_sdk getAdeIntegration ade_token_id=value
 ```
 
 ### Parameters
@@ -207,7 +207,7 @@ Get a list of Automated Device Enrollment devices.
 ### Example
 
 ```bash
- listAdeDevices  blueprint_id=value  user_id=value  dep_account=value  device_family=value  model=value  os=value  profile_status=value  serial_number=value  page=value
+kandji_sdk listAdeDevices  blueprint_id=value  user_id=value  dep_account=value  device_family=value  model=value  os=value  profile_status=value  serial_number=value  page=value
 ```
 
 ### Parameters
@@ -250,7 +250,7 @@ This request returns a list of configured ADE integrations.
 ### Example
 
 ```bash
- listAdeIntegrations
+kandji_sdk listAdeIntegrations
 ```
 
 ### Parameters
@@ -284,7 +284,7 @@ List devices associated to ADE token
 ### Example
 
 ```bash
- listDevicesAssociatedToAdeToken ade_token_id=value  page=value
+kandji_sdk listDevicesAssociatedToAdeToken ade_token_id=value  page=value
 ```
 
 ### Parameters
@@ -321,7 +321,7 @@ Renew ADE integration
 ### Example
 
 ```bash
- renewAdeIntegration ade_token_id=value
+kandji_sdk renewAdeIntegration ade_token_id=value
 ```
 
 ### Parameters
@@ -362,7 +362,7 @@ Update ADE device
 ### Example
 
 ```bash
- updateAdeDevice device_id=value
+kandji_sdk updateAdeDevice device_id=value
 ```
 
 ### Parameters
@@ -399,7 +399,7 @@ Update ADE integration
 ### Example
 
 ```bash
- updateAdeIntegration ade_token_id=value
+kandji_sdk updateAdeIntegration ade_token_id=value
 ```
 
 ### Parameters

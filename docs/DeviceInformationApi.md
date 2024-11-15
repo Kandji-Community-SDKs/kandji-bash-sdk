@@ -25,7 +25,7 @@ This endpoint can be used to send a cancelation request if Lost Mode is in an er
 ### Example
 
 ```bash
- cancelLostMode device_id=value
+kandji_sdk cancelLostMode device_id=value
 ```
 
 ### Parameters
@@ -60,7 +60,7 @@ This request returns the device activity for a specified Device ID.
 ### Example
 
 ```bash
- getDeviceActivity device_id=value  limit=value  offset=value
+kandji_sdk getDeviceActivity device_id=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -98,7 +98,7 @@ Get Device Apps
 ### Example
 
 ```bash
- getDeviceApps device_id=value
+kandji_sdk getDeviceApps device_id=value
 ```
 
 ### Parameters
@@ -133,7 +133,7 @@ This request returns the device details for a specified Device ID.
 ### Example
 
 ```bash
- getDeviceDetails device_id=value
+kandji_sdk getDeviceDetails device_id=value
 ```
 
 ### Parameters
@@ -246,7 +246,7 @@ Get Device Library Items
 ### Example
 
 ```bash
- getDeviceLibraryItems device_id=value
+kandji_sdk getDeviceLibraryItems device_id=value
 ```
 
 ### Parameters
@@ -282,7 +282,7 @@ Get Device Lost Mode details
 ### Example
 
 ```bash
- getDeviceLostModeDetails device_id=value
+kandji_sdk getDeviceLostModeDetails device_id=value
 ```
 
 ### Parameters
@@ -362,7 +362,7 @@ Get Device Parameters
 ### Example
 
 ```bash
- getDeviceParameters device_id=value
+kandji_sdk getDeviceParameters device_id=value
 ```
 
 ### Parameters
@@ -499,7 +499,7 @@ Get Device Status
 ### Example
 
 ```bash
- getDeviceStatus device_id=value
+kandji_sdk getDeviceStatus device_id=value
 ```
 
 ### Parameters
@@ -535,7 +535,7 @@ List Devices
 ### Example
 
 ```bash
- listDevices  limit=value  asset_tag=value  blueprint_id=value  device_id=value  device_name=value  filevault_enabled=value  mac_address=value  model=value  ordering=value  os_version=value  platform=value  serial_number=value  tag_name=value  tag_name_in=value  tag_id=value  tag_id_in=value  user=value  user_email=value  user_id=value  user_name=value  offset=value
+kandji_sdk listDevices  limit=value  asset_tag=value  blueprint_id=value  device_id=value  device_name=value  filevault_enabled=value  mac_address=value  model=value  ordering=value  os_version=value  platform=value  serial_number=value  tag_name=value  tag_name_in=value  tag_id=value  tag_id_in=value  user=value  user_email=value  user_id=value  user_name=value  offset=value
 ```
 
 ### Parameters

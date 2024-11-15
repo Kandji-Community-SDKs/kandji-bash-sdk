@@ -20,7 +20,7 @@ Get User
 ### Example
 
 ```bash
- getUser user_id=value
+kandji_sdk getUser user_id=value
 ```
 
 ### Parameters
@@ -56,7 +56,7 @@ List Users
 ### Example
 
 ```bash
- listUsers  email=value  id=value  integration_id=value  archived=value
+kandji_sdk listUsers  email=value  id=value  integration_id=value  archived=value
 ```
 
 ### Parameters

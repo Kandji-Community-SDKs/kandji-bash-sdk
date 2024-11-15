@@ -18,7 +18,7 @@ List Self Service Categories
 ### Example
 
 ```bash
- listSelfServiceCategories
+kandji_sdk listSelfServiceCategories
 ```
 
 ### Parameters

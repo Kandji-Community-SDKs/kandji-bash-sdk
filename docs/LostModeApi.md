@@ -21,7 +21,7 @@ Disable Lost Mode
 ### Example
 
 ```bash
- disableLostMode device_id=value
+kandji_sdk disableLostMode device_id=value
 ```
 
 ### Parameters
@@ -57,7 +57,7 @@ Enable Lost Mode
 ### Example
 
 ```bash
- enableLostMode device_id=value
+kandji_sdk enableLostMode device_id=value
 ```
 
 ### Parameters
@@ -94,7 +94,7 @@ Play Lost Mode Sound
 ### Example
 
 ```bash
- playLostModeSound device_id=value
+kandji_sdk playLostModeSound device_id=value
 ```
 
 ### Parameters
@@ -129,7 +129,7 @@ This endpoint sends an MDM command to update the location data on iOS and iPadOS
 ### Example
 
 ```bash
- updateLocation device_id=value
+kandji_sdk updateLocation device_id=value
 ```
 
 ### Parameters

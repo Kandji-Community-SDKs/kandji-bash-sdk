@@ -20,7 +20,7 @@ Create a tag. Can only create one tag per request.
 ### Example
 
 ```bash
- createTag
+kandji_sdk createTag
 ```
 
 ### Parameters
@@ -57,7 +57,7 @@ Delete Tag
 ### Example
 
 ```bash
- deleteTag tag_id=value
+kandji_sdk deleteTag tag_id=value
 ```
 
 ### Parameters
@@ -92,7 +92,7 @@ Return configured tags.
 ### Example
 
 ```bash
- getTags  search=value
+kandji_sdk getTags  search=value
 ```
 
 ### Parameters
@@ -129,7 +129,7 @@ Update Tag
 ### Example
 
 ```bash
- updateTag tag_id=value
+kandji_sdk updateTag tag_id=value
 ```
 
 ### Parameters

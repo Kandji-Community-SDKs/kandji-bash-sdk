@@ -1,8 +1,6 @@
 Dockerfile
 README.md
-_client.sh
-client.sh
-client.sh.bash-completion
+_kandji_sdk
 docs/AutomatedDeviceEnrollmentIntegrationsApi.md
 docs/BlueprintsApi.md
 docs/CustomAppsApi.md
@@ -21,3 +19,5 @@ docs/SettingsApi.md
 docs/TagsApi.md
 docs/ThreatsApi.md
 docs/UsersApi.md
+kandji_sdk
+kandji_sdk.bash-completion

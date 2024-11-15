@@ -10,25 +10,25 @@ The script uses cURL underneath for making all REST calls.
 
 ```shell
 # Make sure the script has executable rights
-$ chmod u+x 
+$ chmod u+x kandji_sdk
 
 # Print the list of operations available on the service
-$ ./ -h
+$ ./kandji_sdk -h
 
 # Print the service description
-$ ./ --about
+$ ./kandji_sdk --about
 
 # Print detailed information about specific operation
-$ ./ <operationId> -h
+$ ./kandji_sdk <operationId> -h
 
 # Make GET request
-./ --host http://<hostname>:<port> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
+./kandji_sdk --host http://<hostname>:<port> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
 
 # Make GET request using arbitrary curl options (must be passed before <operationId>) to an SSL service using username:password
- -k -sS --tlsv1.2 --host https://<hostname> -u <user>:<password> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
+kandji_sdk -k -sS --tlsv1.2 --host https://<hostname> -u <user>:<password> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
 
 # Make POST request
-$ echo '<body_content>' |  --host <hostname> --content-type json <operationId> -
+$ echo '<body_content>' | kandji_sdk --host <hostname> --content-type json <operationId> -
 
 # Make POST request with simple JSON content, e.g.:
 # {
@@ -36,13 +36,13 @@ $ echo '<body_content>' |  --host <hostname> --content-type json <operationId> -
 #   "key2": "value2",
 #   "key3": 23
 # }
-$ echo '<body_content>' |  --host <hostname> --content-type json <operationId> key1==value1 key2=value2 key3:=23 -
+$ echo '<body_content>' | kandji_sdk --host <hostname> --content-type json <operationId> key1==value1 key2=value2 key3:=23 -
 
 # Make POST request with form data
-$  --host <hostname> <operationId> key1:=value1 key2:=value2 key3:=23
+$ kandji_sdk --host <hostname> <operationId> key1:=value1 key2:=value2 key3:=23
 
 # Preview the cURL command without actually executing it
-$  --host http://<hostname>:<port> --dry-run <operationid>
+$ kandji_sdk --host http://<hostname>:<port> --dry-run <operationid>
 
 ```
 
@@ -68,13 +68,13 @@ is also available.
 The generated bash-completion script can be either directly loaded to the current Bash session using:
 
 ```shell
-source .bash-completion
+source kandji_sdk.bash-completion
 ```
 
 Alternatively, the script can be copied to the `/etc/bash-completion.d` (or on OSX with Homebrew to `/usr/local/etc/bash-completion.d`):
 
 ```shell
-sudo cp .bash-completion /etc/bash-completion.d/
+sudo cp kandji_sdk.bash-completion /etc/bash-completion.d/kandji_sdk
 ```
 
 #### OS X
@@ -95,7 +95,7 @@ fi
 
 ### Zsh
 
-In Zsh, the generated `_` Zsh completion file must be copied to one of the folders under `$FPATH` variable.
+In Zsh, the generated `_kandji_sdk` Zsh completion file must be copied to one of the folders under `$FPATH` variable.
 
 ## Documentation for API Endpoints
 

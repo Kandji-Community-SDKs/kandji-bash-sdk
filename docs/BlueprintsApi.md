@@ -70,7 +70,7 @@ Assign Library Item
 ### Example
 
 ```bash
- assignLibraryItem blueprint_id=value
+kandji_sdk assignLibraryItem blueprint_id=value
 ```
 
 ### Parameters
@@ -108,7 +108,7 @@ Create Blueprint
 ### Example
 
 ```bash
- createBlueprint
+kandji_sdk createBlueprint
 ```
 
 ### Parameters
@@ -152,7 +152,7 @@ Delete Blueprint
 ### Example
 
 ```bash
- deleteBlueprint blueprint_id=value
+kandji_sdk deleteBlueprint blueprint_id=value
 ```
 
 ### Parameters
@@ -189,7 +189,7 @@ Get Blueprint
 ### Example
 
 ```bash
- getBlueprint blueprint_id=value
+kandji_sdk getBlueprint blueprint_id=value
 ```
 
 ### Parameters
@@ -222,7 +222,7 @@ Get Blueprint Templates
 ### Example
 
 ```bash
- getBlueprintTemplates  limit=value  offset=value
+kandji_sdk getBlueprintTemplates  limit=value  offset=value
 ```
 
 ### Parameters
@@ -269,7 +269,7 @@ Get Manual Enrollment Profile
 ### Example
 
 ```bash
- getManualEnrollmentProfile blueprint_id=value  sso=value
+kandji_sdk getManualEnrollmentProfile blueprint_id=value  sso=value
 ```
 
 ### Parameters
@@ -305,7 +305,7 @@ This request returns a list of a blueprint records in the Kandji tenant. Optiona
 ### Example
 
 ```bash
- listBlueprints  id=value  id__in=value  name=value  limit=value  offset=value
+kandji_sdk listBlueprints  id=value  id__in=value  name=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -363,7 +363,7 @@ List Library Items
 ### Example
 
 ```bash
- listLibraryItems blueprint_id=value
+kandji_sdk listLibraryItems blueprint_id=value
 ```
 
 ### Parameters
@@ -439,7 +439,7 @@ Remove Library Item
 ### Example
 
 ```bash
- removeLibraryItem blueprint_id=value
+kandji_sdk removeLibraryItem blueprint_id=value
 ```
 
 ### Parameters
@@ -477,7 +477,7 @@ Update Blueprint
 ### Example
 
 ```bash
- updateBlueprint blueprint_id=value
+kandji_sdk updateBlueprint blueprint_id=value
 ```
 
 ### Parameters

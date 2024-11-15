@@ -34,7 +34,7 @@ Get activation lock attributes for devices.
 ### Example
 
 ```bash
- activationLock  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk activationLock  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -75,7 +75,7 @@ Get Application Firewall details for macOS.
 ### Example
 
 ```bash
- applicationFirewall  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk applicationFirewall  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -116,7 +116,7 @@ Get the applications installed on macOS, iOS, iPadOS, and tvOS devices.
 ### Example
 
 ```bash
- applications  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk applications  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -157,7 +157,7 @@ Get certificate details.
 ### Example
 
 ```bash
- certificates  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk certificates  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -200,7 +200,7 @@ Count
 ### Example
 
 ```bash
- count  category=value
+kandji_sdk count  category=value
 ```
 
 ### Parameters
@@ -241,7 +241,7 @@ Get Desktop and Screensaver details for macOS.
 ### Example
 
 ```bash
- desktopAndScreensaver  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk desktopAndScreensaver  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -282,7 +282,7 @@ Get attributes about devices.
 ### Example
 
 ```bash
- deviceInformation  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk deviceInformation  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -324,7 +324,7 @@ Get FileVault information for macOS.
 ### Example
 
 ```bash
- filevault  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk filevault  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -365,7 +365,7 @@ Get Gatekeeper and XProtect attributes for macOS.
 ### Example
 
 ```bash
- gatekeeperAndXprotect  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk gatekeeperAndXprotect  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -408,7 +408,7 @@ Get category export
 ### Example
 
 ```bash
- getCategoryExport export_id=value
+kandji_sdk getCategoryExport export_id=value
 ```
 
 ### Parameters
@@ -443,7 +443,7 @@ Get Installed Profiles attributes for macOS, iOS, iPadOS, and tvOS.
 ### Example
 
 ```bash
- installedProfiles  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk installedProfiles  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -484,7 +484,7 @@ Get Kernel Extension attributes for macOS.
 ### Example
 
 ```bash
- kernelExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk kernelExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -525,7 +525,7 @@ Get Launch Agents and Daemons installed on macOS.
 ### Example
 
 ```bash
- launchAgentsAndDaemons  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk launchAgentsAndDaemons  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -566,7 +566,7 @@ Get Local Users detials for macOS.
 ### Example
 
 ```bash
- localUsers  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk localUsers  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -651,7 +651,7 @@ Request category export
 ### Example
 
 ```bash
- requestCategoryExport
+kandji_sdk requestCategoryExport
 ```
 
 ### Parameters
@@ -686,7 +686,7 @@ Get Startup settings for macOS.
 ### Example
 
 ```bash
- startupSettings  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk startupSettings  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -727,7 +727,7 @@ Get System Extension attributes for macOS.
 ### Example
 
 ```bash
- systemExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk systemExtensions  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters
@@ -768,7 +768,7 @@ Get Transparency Database (TCC) attributes for macOS.
 ### Example
 
 ```bash
- transparencyDatabase  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
+kandji_sdk transparencyDatabase  blueprint_ids=value  device_families=value  filter=value  sort_by=value  limit=value  offset=value
 ```
 
 ### Parameters

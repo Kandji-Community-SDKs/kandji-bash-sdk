@@ -25,7 +25,7 @@ Create In-House App
 ### Example
 
 ```bash
- createInhouseApp Content-Type:value
+kandji_sdk createInhouseApp Content-Type:value
 ```
 
 ### Parameters
@@ -64,7 +64,7 @@ Delete In-House App
 ### Example
 
 ```bash
- deleteInhouseApp library_item_id=value
+kandji_sdk deleteInhouseApp library_item_id=value
 ```
 
 ### Parameters
@@ -101,7 +101,7 @@ Get In-House App
 ### Example
 
 ```bash
- getInhouseApp library_item_id=value
+kandji_sdk getInhouseApp library_item_id=value
 ```
 
 ### Parameters
@@ -136,7 +136,7 @@ This endpoint makes a request to retrieve a list of In-House Apps from the Kandj
 ### Example
 
 ```bash
- listInhouseApps  page=value
+kandji_sdk listInhouseApps  page=value
 ```
 
 ### Parameters
@@ -174,7 +174,7 @@ Update In-House App
 ### Example
 
 ```bash
- updateInhouseApp library_item_id=value Content-Type:value
+kandji_sdk updateInhouseApp library_item_id=value Content-Type:value
 ```
 
 ### Parameters
@@ -215,7 +215,7 @@ Upload In-House App
 ### Example
 
 ```bash
- uploadInhouseApp Content-Type:value
+kandji_sdk uploadInhouseApp Content-Type:value
 ```
 
 ### Parameters
@@ -256,7 +256,7 @@ Upload In-House App Status
 ### Example
 
 ```bash
- uploadInhouseAppStatus pending_upload_id=value
+kandji_sdk uploadInhouseAppStatus pending_upload_id=value
 ```
 
 ### Parameters
