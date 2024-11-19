@@ -8,7 +8,7 @@
 # ! openapi-generator (https://openapi-generator.tech)
 # ! FROM OPENAPI SPECIFICATION IN JSON.
 # !
-# ! Generator version: 7.9.0
+# ! Generator version: 7.10.0
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -2882,7 +2882,7 @@ print_listCustomProfiles_help() {
     echo -e "This endpoint makes a request to retrieve a list of custom profiles from the Kandji library." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}page${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Optional page number (when results exceed pagination threshold)${YELLOW} Specify as: page=value${OFF}" \
+    echo -e "  * ${GREEN}page${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Optional page number. Used when results exceed pagination threshold. A hard upper limit is set at 300 device records returned per request.${YELLOW} Specify as: page=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -3078,7 +3078,7 @@ print_listCustomScripts_help() {
     echo -e "This endpoint makes a request to retrieve a list of custom scripts from the Kandji library." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}page${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Optional page number (when results exceed pagination threshold)${YELLOW} Specify as: page=value${OFF}" \
+    echo -e "  * ${GREEN}page${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Optional page number. Used when results exceed pagination threshold. A hard upper limit is set at 300 device records returned per request.${YELLOW} Specify as: page=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"

@@ -10,7 +10,7 @@
 # !
 # ! Based on: https://github.com/Valodim/zsh-curl-completion/blob/master/_curl
 # !
-# ! Generator version: 7.9.0
+# ! Generator version: 7.10.0
 # !
 # !
 # ! Installation:
@@ -618,7 +618,7 @@ case $state in
       listCustomProfiles)
         local -a _op_arguments
         _op_arguments=(
-                    "page=:[QUERY] Optional page number (when results exceed pagination threshold)"
+                    "page=:[QUERY] Optional page number. Used when results exceed pagination threshold. A hard upper limit is set at 300 device records returned per request."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -652,7 +652,7 @@ case $state in
       listCustomScripts)
         local -a _op_arguments
         _op_arguments=(
-                    "page=:[QUERY] Optional page number (when results exceed pagination threshold)"
+                    "page=:[QUERY] Optional page number. Used when results exceed pagination threshold. A hard upper limit is set at 300 device records returned per request."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;

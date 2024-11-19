@@ -139,7 +139,7 @@ kandji_sdk listCustomScripts  page=value
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **string** | Optional page number (when results exceed pagination threshold) | [optional] [default to null]
+ **page** | **string** | Optional page number. Used when results exceed pagination threshold. A hard upper limit is set at 300 device records returned per request. | [optional] [default to null]
 
 ### Return type
 
