@@ -152,7 +152,7 @@ Erase Device
 <tr>
 <td><code>PIN</code></td>
 <td><code>string</code></td>
-<td>The six-character PIN for Find My. This value is available in macOS 10.8 and later.</td>
+<td>The six-character PIN for Find My. This value is available in macOS 10.8 and later.  <br />  <br />Note: This value will be ignored for iOS, iPadOS, and tvOS devices.</td>
 </tr>
 <tr>
 <td><code>PreserveDataPlan</code></td>
