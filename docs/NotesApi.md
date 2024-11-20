@@ -164,7 +164,7 @@ This request patches a specified note (Note ID) for the specified Device ID.
 ### Example
 
 ```bash
-kandji_sdk updateDeviceNote device_id=value note_id=value Authorization:value Content-Type:value
+kandji_sdk updateDeviceNote device_id=value note_id=value
 ```
 
 ### Parameters
@@ -174,8 +174,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deviceId** | **string** |  | [default to null]
  **noteId** | **string** |  | [default to null]
- **authorization** | **string** |  | [default to null]
- **contentType** | **string** |  | [default to null]
  **body** | **string** |  | [optional]
 
 ### Return type

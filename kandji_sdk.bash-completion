@@ -265,7 +265,7 @@ _kandji_sdk()
     operation_parameters["deleteDeviceNote"]="device_id= note_id= "
     operation_parameters["getDeviceNotes"]="device_id= "
     operation_parameters["retrieveDeviceNote"]="device_id= note_id= "
-    operation_parameters["updateDeviceNote"]="device_id= note_id= Authorization: Content-Type: "
+    operation_parameters["updateDeviceNote"]="device_id= note_id= "
     operation_parameters["activationLock"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
     operation_parameters["applicationFirewall"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "
     operation_parameters["applications"]="blueprint_ids= device_families= filter= sort_by= limit= offset= "

@@ -1035,9 +1035,7 @@ case $state in
         _op_arguments=(
           "device_id=:[PATH] "
 "note_id=:[PATH] "
-                    "Authorization\::[HEADER] "
-"Content-Type\::[HEADER] "
-)
+                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       activationLock)

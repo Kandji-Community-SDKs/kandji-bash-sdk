@@ -271,8 +271,6 @@ operation_parameters_minimum_occurrences["retrieveDeviceNote:::device_id"]=1
 operation_parameters_minimum_occurrences["retrieveDeviceNote:::note_id"]=1
 operation_parameters_minimum_occurrences["updateDeviceNote:::device_id"]=1
 operation_parameters_minimum_occurrences["updateDeviceNote:::note_id"]=1
-operation_parameters_minimum_occurrences["updateDeviceNote:::Authorization"]=1
-operation_parameters_minimum_occurrences["updateDeviceNote:::Content-Type"]=1
 operation_parameters_minimum_occurrences["updateDeviceNote:::body"]=0
 operation_parameters_minimum_occurrences["activationLock:::blueprint_ids"]=0
 operation_parameters_minimum_occurrences["activationLock:::device_families"]=0
@@ -569,8 +567,6 @@ operation_parameters_maximum_occurrences["retrieveDeviceNote:::device_id"]=0
 operation_parameters_maximum_occurrences["retrieveDeviceNote:::note_id"]=0
 operation_parameters_maximum_occurrences["updateDeviceNote:::device_id"]=0
 operation_parameters_maximum_occurrences["updateDeviceNote:::note_id"]=0
-operation_parameters_maximum_occurrences["updateDeviceNote:::Authorization"]=0
-operation_parameters_maximum_occurrences["updateDeviceNote:::Content-Type"]=0
 operation_parameters_maximum_occurrences["updateDeviceNote:::body"]=0
 operation_parameters_maximum_occurrences["activationLock:::blueprint_ids"]=0
 operation_parameters_maximum_occurrences["activationLock:::device_families"]=0
@@ -864,8 +860,6 @@ operation_parameters_collection_type["retrieveDeviceNote:::device_id"]=""
 operation_parameters_collection_type["retrieveDeviceNote:::note_id"]=""
 operation_parameters_collection_type["updateDeviceNote:::device_id"]=""
 operation_parameters_collection_type["updateDeviceNote:::note_id"]=""
-operation_parameters_collection_type["updateDeviceNote:::Authorization"]=""
-operation_parameters_collection_type["updateDeviceNote:::Content-Type"]=""
 operation_parameters_collection_type["updateDeviceNote:::body"]=""
 operation_parameters_collection_type["activationLock:::blueprint_ids"]=""
 operation_parameters_collection_type["activationLock:::device_families"]=""
@@ -4960,8 +4954,6 @@ print_updateDeviceNote_help() {
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}device_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: device_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}note_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: note_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}Authorization${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: Authorization:value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}Content-Type${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: Content-Type:value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
